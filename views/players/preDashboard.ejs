@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Where's Waldo</title>
+</head>
+<body onload="document.form1.submit()">
+    <header>
+        <h1>Index Page</h1>
+    </header>
+    <main>
+        <form id='form1' action="/<%= player._id %>/foundWaldo?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+
+            <input type='hidden' type="text" name="score" value='5'/>
+            
+
+
+
+
+        </form>
+
+    
+    </main>
+
+
+
+
+<script >
+    document.getElementById("form1").submit()
+</script>
+    
+</body>
+
+</html>
