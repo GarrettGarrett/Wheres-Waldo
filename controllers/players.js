@@ -62,6 +62,14 @@ router.get('/:id/preDashboard', (req, res) => {
 	})
 })
 
+// Edit -  Found Waldo 
+router.put("/:id/foundWaldo", (req, res) => {
+	Player.findById(req.params.id, (error, foundPlayer) => {
+		Player.findByIdAndUpdate(req.params.id, { score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 3))}, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+			});
+        });
+	})
 
 
 // Exports
