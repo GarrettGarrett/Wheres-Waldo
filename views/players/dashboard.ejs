@@ -59,3 +59,46 @@
             </tbody>
 
         </table>
+
+        <center>
+            <h4>HIGHSCORES</h4>
+        </center>
+       
+        <table class="striped" id='myTable'>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>Username</th>
+                </tr>
+              </thead>
+      
+              <tbody class='hiscore'>
+            <% for(let i = 0; i < allplayers.length; i++) { %>
+                <tr>
+                  <td id='place'> <%= i + 1 %> </td>
+                  <td><%= allplayers[i].score %></td>
+                  <td><%= allplayers[i].username %></td>
+                </tr>
+                
+            <% } %> 
+              </tbody>
+
+
+        </table>
+
+        <center>
+            <form action="/<%= player.id %>/playagain?_method=PUT" method="POST" href=''>
+                    
+                
+                
+                <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+                <input type="submit" value="PLAY AGAIN" id='' />
+            </form>
+        </center>
+
+
+
+
+
+    </main>
