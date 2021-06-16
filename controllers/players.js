@@ -31,6 +31,16 @@ router.put("/createPlayer", (req, res) => {
     });
 });
 
+//  Show - Looking for Waldo 
+router.get('/:id', (req, res) => {
+	Player.findById(req.params.id, (error, foundPlayer) => {
+		res.render('./players/show.ejs', {
+        player: foundPlayer
+        });
+	})
+})
+
+
 
 // Exports
 module.exports = router;
