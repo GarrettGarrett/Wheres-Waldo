@@ -41,3 +41,14 @@
 
 
             </table>
+            <center>
+                <form action="/createPlayer?_method=PUT" method="POST" href=''>
+                        
+                    <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+                    
+                    <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+                    <input type="submit" value="PLAY" id='' />
+                </form>
+            </center>
+            
+                </main>
