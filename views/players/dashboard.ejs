@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css"   href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Where's Waldo</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+        <a href="/">Main Page</a>
+        
+    <main>
+        <center>
+            <h4>Your Score</h4>
+        </center>
+        
+        <table>
+            <thead>
+            <tr>
+                <th>Time</th>
+                <th>Name</th>
+                <th>Edit</th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+            
+                <tr>
+                <td id='resultScore'><%= player.score %>  </td>
+
+                <td>
+                    
+                    <form action="/<%= player._id %>/edit?_method=PUT" method="POST" href=''>
+                        <input id='newUserName' type="text" name="username" value="<%= player.username %>"  >
+                    <td>
+                        <input type="submit" value="Change Name" id='' />
+                    </form>
+
+
+                    <form action="/<%= player._id %>/Dashboard?_method=DELETE" method="POST">
+                     
+                        <input type="submit" value="Delete" id='' />
+                    </form>
+                </td>  
+                </td>
+
+                
+
+
+   
+                </tr>
+            
+            
+            </tbody>
+
+        </table>
