@@ -53,6 +53,15 @@ router.get('/:id/dashboard', (req, res) => {
 })
 })
 
+//  Show - preDashboard after finding Waldo
+router.get('/:id/preDashboard', (req, res) => {
+	Player.findById(req.params.id, (error, foundPlayer) => {
+		res.render('./players/preDashboard.ejs', {
+        player: foundPlayer
+        });
+	})
+})
+
 
 
 // Exports
