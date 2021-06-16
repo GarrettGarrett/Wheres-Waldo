@@ -16,7 +16,12 @@ router.get('/' , (req, res) => {
   });
 });
 
-
+// Delete - user
+router.delete('/:id/Dashboard', (req, res) => {
+	Player.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/');
+    });
+});
 
 
 // Exports
