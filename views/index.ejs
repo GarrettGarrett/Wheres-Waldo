@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -11,6 +8,36 @@
     <title>Where's Waldo</title>
 </head>
 <body>
-    testing heroku
-</body>
-</html>
+    <header>
+        <center>
+            <h1>Where's Waldo</h1>
+        </center>
+        
+    </header>
+    <main>
+        <center>
+            <h4>HIGHSCORES</h4>
+        </center>
+           
+            <table class="striped" id='myTable'>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                  </thead>
+          
+                  <tbody class='hiscore'>
+                <% for(let i = 0; i < players.length; i++) { %>
+                    <tr>
+                      <td> <%= i + 1 %> </td>
+                      <td><%= players[i].score %></td>
+                      <td><%= players[i].username %></td>
+                    </tr>
+                    
+                <% } %> 
+                  </tbody>
+
+
+            </table>
