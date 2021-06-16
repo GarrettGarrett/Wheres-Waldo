@@ -1,0 +1,19 @@
+tbody.hiscore {
+    display: block;
+    height: 300px;
+    overflow: auto;
+    
+  }
+  thead, tbody tr {
+    display: table;
+    width: 50%;
+    table-layout: fixed;
+    margin: 0 auto;
+  }
+  thead {
+    width: calc( 50% - 1em )
+  }
+  table {
+    width: 100%;
+  }
+
