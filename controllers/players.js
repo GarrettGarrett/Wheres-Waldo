@@ -71,6 +71,15 @@ router.put("/:id/foundWaldo", (req, res) => {
         });
 	})
 
+// Edit - username
+router.put("/:id/edit", (req, res) => {
+	Player.findById(req.params.id, (error, foundPlayer) => {
+		Player.findByIdAndUpdate(req.params.id, { username: req.body.username }, {new:true}, (error, foundPlayer) => { 
+			res.redirect(`/${req.params.id}/Dashboard`);
+			});
+        });
+	})
+
 
 // Exports
 module.exports = router;
