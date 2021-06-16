@@ -23,6 +23,14 @@ router.delete('/:id/Dashboard', (req, res) => {
     });
 });
 
+//  Create a new player
+router.put("/createPlayer", (req, res) => {
+    Player.create(req.body, (err, createdPlayer) => {
+        res.redirect(`/${createdPlayer._id}/`);
+        
+    });
+});
+
 
 // Exports
 module.exports = router;
