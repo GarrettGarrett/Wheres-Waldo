@@ -40,6 +40,19 @@ router.get('/:id', (req, res) => {
 	})
 })
 
+//  Show - Dashboard after finding Waldo
+router.get('/:id/dashboard', (req, res) => {
+    Player.find({}, (error, foundPlayers) => {
+        Player.findById(req.params.id, (error, foundPlayer) => {
+            res.render('./players/dashboard.ejs', {
+            player: foundPlayer,
+            allplayers: foundPlayers
+            
+        });
+	})
+})
+})
+
 
 
 // Exports
