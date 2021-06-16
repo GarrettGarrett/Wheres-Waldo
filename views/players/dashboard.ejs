@@ -138,3 +138,12 @@
             }
           }
         }
+        function assignPositionToTable() {
+            var table = document.getElementById('myTable');
+            var targetTDs = table.querySelectorAll('tr > td:first-child');
+            for (var i = 0; i < targetTDs.length; i++) {
+                var td = targetTDs[i];
+                td.innerHTML = `${i + 1}`
+                
+                };  
+        };
