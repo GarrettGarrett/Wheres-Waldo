@@ -17,3 +17,6 @@ tbody.hiscore {
     width: 100%;
   }
 
+area:-webkit-any-link {
+    cursor: default;
+  }
