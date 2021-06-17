@@ -44,7 +44,7 @@ router.get('/:id', (req, res) => {
 router.get('/:id/dashboard', (req, res) => {
     Player.find({}, (error, foundPlayers) => {
         Player.findById(req.params.id, (error, foundPlayer) => {
-            res.render('./players/dashboard2.ejs', {
+            res.render('./players/Dashboard2.ejs', {
             player: foundPlayer,
             players: foundPlayers
             
