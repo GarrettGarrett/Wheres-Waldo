@@ -20,11 +20,22 @@ area:-webkit-any-link {
     cursor: default;
   }
 
-.card {
-    
-   
-           
+.nav-wrapper {
+  background-color:#8CB2DD; 
+  display: flex;
+  
+
 }
+
+#waldoHeaderLogo {
+  text-align: center;
+    
+}
+
+.navbar-fixed {
+  z-index: 999; 
+}
+
 
 
 

@@ -9,18 +9,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
+  <header>
+
+    <nav style='min-height: 122px; margin-bottom: 15%;'>
+      <div class="nav-wrapper">
+      <img id='waldoHeader' style="max-width: 230px" class="brand-logo left" src="https://i.imgur.com/M5eufVN.png" alt="">
+      <img id='waldoHeaderLogo' style="max-width: 240px" class="brand-logo center" src="https://i.imgur.com/kFeVF5Z.png" alt="">
+      </div>
+    </nav>
+  
+  
+  </header>
+
   <body>
 
 <div class="container">
 
     <center>
-        <h4>Your Score</h4>
+<br>
+<br>
+<br>
     </center>
     
     <table>
         <thead>
         <tr>
             <th>Time</th>
+            <th>Scene</th>
             <th>Name</th>
             <th>Edit</th>
         </tr>
@@ -28,15 +43,20 @@
       <tbody>
             <tr>
             <td id='resultScore'><%= player.score %>  </td>
+            <td id='resultScore'><%= player.location %>  </td>
             <td>
+              
                 <form action="/<%= player._id %>/edit?_method=PUT" method="POST" href=''>
                     <input id='newUserName' type="text" name="username" value="<%= player.username %>"  >
                 <td>
-                    <input type="submit" value="Change Name" id='' />
+                  <button name="fileurlsubmitted" value="Edit Username" class="waves-effect waves-light btn-small" id="submitFileUrlForDownload"><i class="material-icons right">edit</i>Edit Name</button>
                 </form>
-                <form action="/<%= player._id %>/Dashboard?_method=DELETE" method="POST">
+                
+                
+                <form style='padding-top: 9px;' action="/<%= player._id %>/Dashboard?_method=DELETE" method="POST">
                  
-                    <input type="submit" value="Delete User" id='' />
+                  <button name="fileurlsubmitted" value="Edit Username" class="waves-effect waves-light btn-small #e53935 red darken-1" id="submitFileUrlForDownload"><i class="material-icons right">delete_forever</i>Delete</button>
+
                 </form>
             </td>  
             </td>
@@ -60,8 +80,12 @@
               <img id='cards' class="activator" src="https://i.imgur.com/FMJWVAJ.jpg">
               </div>
   
-              <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Sea<i class="material-icons right">more_vert</i>
+              <div class="card-content" style='
+              padding-bottom: 7px;
+              padding-top: 7px;
+              padding-left: 20px;
+              padding-right: 20px;'          >
+                  <span class="card-title activator grey-text text-darken-4">At Sea<i class="material-icons right">more_vert</i>
                   </span>
   
                   <form action="/<%= player.id %>/playagain?_method=PUT" method="POST" href=''>
@@ -72,7 +96,12 @@
   
                   <input type='hidden' type="text" name="location" value='sea'/>
   
-                  <input type="submit" value="PLAY AGAIN" id='' />
+                  
+                  <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light #2196f3 blue" id="submitFileUrlForDownload"><i class="material-icons">play_arrow</i></button>
+
+                
+
+
               </form>
               
           </div>
@@ -115,7 +144,11 @@
               <img id='cards' class="activator" src="https://i.imgur.com/lXLN6qI.jpeg">
               </div>
       
-              <div class="card-content">
+              <div class="card-content" style='
+              padding-bottom: 7px;
+              padding-top: 7px;
+              padding-left: 20px;
+              padding-right: 20px;'          >
                   <span class="card-title activator grey-text text-darken-4">Gobbling Gluttons<i class="material-icons right">more_vert</i>
                   </span>
       
@@ -127,7 +160,7 @@
       
                   <input type='hidden' type="text" name="location" value='gobbling'/>
       
-                  <input type="submit" value="PLAY" id='' />
+                  <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light red" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
               </form>
               
           </div>
@@ -163,7 +196,7 @@
           </div>
       </div>
   <!-- ----------------------------------------------------------------------- -->
-   <!-- --------------------------------Around Town--------------------------------------- -->
+   <!-- --------------------------------In Town--------------------------------------- -->
   
        
           <div class="col s6"> <div class="card">
@@ -171,8 +204,12 @@
               <img id='cards' class="activator" src="https://i.imgur.com/M7xwSQ3.jpg">
               </div>
   
-              <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">Around Town<i class="material-icons right">more_vert</i>
+              <div class="card-content" style='
+              padding-bottom: 7px;
+              padding-top: 7px;
+              padding-left: 20px;
+              padding-right: 20px;'          >
+                  <span class="card-title activator grey-text text-darken-4">In Town<i class="material-icons right">more_vert</i>
                   </span>
   
                   <form action="/<%= player.id %>/playagain?_method=PUT" method="POST" href=''>
@@ -183,7 +220,7 @@
   
                   <input type='hidden' type="text" name="location" value='town'/>
   
-                  <input type="submit" value="PLAY" id='' />
+                  <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light #ffee58 yellow lighten-1" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
               </form>
               
           </div>
@@ -227,7 +264,11 @@
       <img id='cards' class="activator" src="https://i.imgur.com/e01mxvh.jpg">
       </div>
   
-      <div class="card-content">
+      <div class="card-content" style='
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 20px;
+      padding-right: 20px;'          >
           <span class="card-title activator grey-text text-darken-4">Fortress<i class="material-icons right">more_vert</i>
           </span>
   
@@ -239,7 +280,7 @@
   
           <input type='hidden' type="text" name="location" value='fortress'/>
   
-          <input type="submit" value="PLAY" id='' />
+          <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light #43a047 green darken-1" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
       </form>
       
   </div>
@@ -281,7 +322,11 @@
       <img id='cards' class="activator" src="https://i.imgur.com/YaWwZHt.jpg">
       </div>
   
-      <div class="card-content">
+      <div class="card-content" style='
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 20px;
+      padding-right: 20px;'          >
           <span class="card-title activator grey-text text-darken-4">Middle Ages<i class="material-icons right">more_vert</i>
           </span>
   
@@ -293,7 +338,7 @@
   
           <input type='hidden' type="text" name="location" value='middleages'/>
   
-          <input type="submit" value="PLAY" id='' />
+          <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light #ff8a65 deep-orange lighten-2" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
       </form>
       
   </div>
@@ -335,7 +380,11 @@
       <img id='cards' class="activator" src="https://i.imgur.com/Cue8FfD.jpg">
       </div>
   
-      <div class="card-content">
+      <div class="card-content" style='
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 20px;
+      padding-right: 20px;'          >
           <span class="card-title activator grey-text text-darken-4">Underground<i class="material-icons right">more_vert</i>
           </span>
   
@@ -347,7 +396,7 @@
   
           <input type='hidden' type="text" name="location" value='underground'/>
   
-          <input type="submit" value="PLAY" id='' />
+          <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light #795548 brown" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
       </form>
       
   </div>
@@ -389,7 +438,11 @@
       <img id='cards' class="activator" src="https://i.imgur.com/CkkCkN0.jpg">
       </div>
   
-      <div class="card-content">
+      <div class="card-content" style='
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 20px;
+      padding-right: 20px;'          >
           <span class="card-title activator grey-text text-darken-4">Foresters<i class="material-icons right">more_vert</i>
           </span>
   
@@ -401,7 +454,7 @@
   
           <input type='hidden' type="text" name="location" value='foresters'/>
   
-          <input type="submit" value="PLAY" id='' />
+          <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light #1b5e20 green darken-4" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
       </form>
       
   </div>
@@ -443,7 +496,11 @@
       <img id='cards' class="activator" src="https://i.imgur.com/iHkNXtV.jpg">
       </div>
   
-      <div class="card-content">
+      <div class="card-content" style='
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 20px;
+      padding-right: 20px;'          >
           <span class="card-title activator grey-text text-darken-4">UnFriendly Giants<i class="material-icons right">more_vert</i>
           </span>
   
@@ -455,7 +512,7 @@
   
           <input type='hidden' type="text" name="location" value='giants'/>
   
-          <input type="submit" value="PLAY" id='' />
+          <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light #ffd600 yellow accent-4" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
       </form>
       
   </div>
@@ -497,7 +554,11 @@
       <img id='cards' class="activator" src="https://i.imgur.com/jB09DjJ.jpg">
       </div>
   
-      <div class="card-content">
+      <div class="card-content" style='
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 20px;
+      padding-right: 20px;'          >
           <span class="card-title activator grey-text text-darken-4">Silent Movie<i class="material-icons right">more_vert</i>
           </span>
   
@@ -509,7 +570,7 @@
   
           <input type='hidden' type="text" name="location" value='movie'/>
   
-          <input type="submit" value="PLAY" id='' />
+          <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light #424242 grey darken-3" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
       </form>
       
   </div>
@@ -551,8 +612,12 @@
       <img id='cards' class="activator" src="https://i.imgur.com/eDcX9KY.jpg">
       </div>
   
-      <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Athletics<i class="material-icons right">more_vert</i>
+      <div class="card-content" style='
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 20px;
+      padding-right: 20px;'          >
+          <span class="card-title activator grey-text text-darken-4">Sports Statdium<i class="material-icons right">more_vert</i>
           </span>
   
           <form action="/<%= player.id %>/playagain?_method=PUT" method="POST" href=''>
@@ -563,7 +628,7 @@
   
           <input type='hidden' type="text" name="location" value='athletics'/>
   
-          <input type="submit" value="PLAY" id='' />
+          <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light red" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
       </form>
       
   </div>
@@ -605,7 +670,11 @@
       <img id='cards' class="activator" src="https://i.imgur.com/QodFZhA.jpg">
       </div>
   
-      <div class="card-content">
+      <div class="card-content" style='
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 20px;
+      padding-right: 20px;'          >
           <span class="card-title activator grey-text text-darken-4">Maze<i class="material-icons right">more_vert</i>
           </span>
   
@@ -617,7 +686,7 @@
   
           <input type='hidden' type="text" name="location" value='maze'/>
   
-          <input type="submit" value="PLAY" id='' />
+          <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light #00e676 green accent-3" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
       </form>
       
   </div>
@@ -659,7 +728,11 @@
       <img id='cards' class="activator" src="https://i.imgur.com/UJu1USE.jpg">
       </div>
   
-      <div class="card-content">
+      <div class="card-content" style='
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 20px;
+      padding-right: 20px;'          >
           <span class="card-title activator grey-text text-darken-4">Outer Space<i class="material-icons right">more_vert</i>
           </span>
   
@@ -671,7 +744,7 @@
   
           <input type='hidden' type="text" name="location" value='space'/>
   
-          <input type="submit" value="PLAY" id='' />
+          <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light #ff80ab pink accent-1" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
       </form>
       
   </div>
@@ -707,14 +780,18 @@
   </div>
   </div>
   <!-- ----------------------------------------------------------------------- -->
-  <!-- ----------------------------Ski Trip----------------------------------- -->
+  <!-- ----------------------------Ski Slopes----------------------------------- -->
   <div class="col s6"> <div class="card">
       <div class="card-image waves-effect waves-block waves-light" >
       <img id='cards' class="activator" src="https://i.imgur.com/de6nmJy.jpg">
       </div>
   
-      <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Ski Trip<i class="material-icons right">more_vert</i>
+      <div class="card-content" style='
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 20px;
+      padding-right: 20px;'          >
+          <span class="card-title activator grey-text text-darken-4">Ski Slopes<i class="material-icons right">more_vert</i>
           </span>
   
           <form action="/<%= player.id %>/playagain?_method=PUT" method="POST" href=''>
@@ -724,7 +801,7 @@
   
           <input type='hidden' type="text" name="location" value='ski'/>
   
-          <input type="submit" value="PLAY" id='' />
+          <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light #ffd600 yellow accent-4" id="submitFileUrlForDownload" ><i class="material-icons icon-black">play_arrow</i></button>
       </form>
       
   </div>
@@ -766,7 +843,11 @@
       <img id='cards' class="activator" src="https://i.imgur.com/rbOo4Dk.jpg">
       </div>
   
-      <div class="card-content">
+      <div class="card-content" style='
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 20px;
+      padding-right: 20px;'          >
           <span class="card-title activator grey-text text-darken-4">Brawl<i class="material-icons right">more_vert</i>
           </span>
   
@@ -778,7 +859,7 @@
   
           <input type='hidden' type="text" name="location" value='brawl'/>
   
-          <input type="submit" value="PLAY" id='' />
+          <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light red" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
       </form>
       
   </div>
@@ -820,7 +901,11 @@
       <img id='cards' class="activator" src="https://i.imgur.com/8WCBNjO.jpg">
       </div>
   
-      <div class="card-content">
+      <div class="card-content" style='
+      padding-bottom: 7px;
+      padding-top: 7px;
+      padding-left: 20px;
+      padding-right: 20px;'          >
           <span class="card-title activator grey-text text-darken-4">Midieval<i class="material-icons right">more_vert</i>
           </span>
   
@@ -832,7 +917,7 @@
   
           <input type='hidden' type="text" name="location" value='midieval'/>
   
-          <input type="submit" value="PLAY" id='' />
+          <button name="fileurlsubmitted" value="ANY_VALUE_HERE" class="btn-floating btn-small waves-effect waves-light #40c4ff light-blue accent-2" id="submitFileUrlForDownload" ><i class="material-icons">play_arrow</i></button>
       </form>
       
   </div>

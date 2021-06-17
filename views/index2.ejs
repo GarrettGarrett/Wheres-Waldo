@@ -8,7 +8,17 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
+<header>
 
+  <nav style='min-height: 122px; margin-bottom: 3%;'>
+    <div class="nav-wrapper">
+    <img id='waldoHeader' style="max-width: 122px" class="brand-logo left" src="https://i.imgur.com/ACEcyOF.png" alt="">
+    <img id='waldoHeaderLogo' style="max-width: 240px" class="brand-logo center" src="https://i.imgur.com/M5eufVN.png" alt="">
+    </div>
+  </nav>
+
+
+</header>
   <body>
       <!-- ----------------------------------------------------------------------- -->
     <div class="container">
@@ -22,7 +32,7 @@
             </div>
 
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Sea<i class="material-icons right">more_vert</i>
+                <span class="card-title activator grey-text text-darken-4">At Sea<i class="material-icons right">more_vert</i>
                 </span>
 
             <form action="/createPlayer?_method=PUT" method="POST" href=''>
@@ -124,7 +134,7 @@
         </div>
     </div>
 <!-- ----------------------------------------------------------------------- -->
- <!-- --------------------------------Around Town--------------------------------------- -->
+ <!-- --------------------------------In Town--------------------------------------- -->
 
      
         <div class="col s6"> <div class="card">
@@ -133,7 +143,7 @@
             </div>
 
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Around Town<i class="material-icons right">more_vert</i>
+                <span class="card-title activator grey-text text-darken-4">In Town<i class="material-icons right">more_vert</i>
                 </span>
 
             <form action="/createPlayer?_method=PUT" method="POST" href=''>
@@ -513,7 +523,7 @@
     </div>
 
     <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Athletics<i class="material-icons right">more_vert</i>
+        <span class="card-title activator grey-text text-darken-4">Sports Stadium<i class="material-icons right">more_vert</i>
         </span>
 
     <form action="/createPlayer?_method=PUT" method="POST" href=''>
@@ -668,14 +678,14 @@
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
-<!-- ----------------------------Ski Trip----------------------------------- -->
+<!-- ----------------------------Ski Slopes----------------------------------- -->
 <div class="col s6"> <div class="card">
     <div class="card-image waves-effect waves-block waves-light" >
     <img id='cards' class="activator" src="https://i.imgur.com/de6nmJy.jpg">
     </div>
 
     <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">Ski Trip<i class="material-icons right">more_vert</i>
+        <span class="card-title activator grey-text text-darken-4">Ski Slopes<i class="material-icons right">more_vert</i>
         </span>
 
     <form action="/createPlayer?_method=PUT" method="POST" href=''>
@@ -964,6 +974,7 @@
         sortTableByScore('seaTable'); //re arranges table by their score, before hh:mm:ss
         assignPositionToTable('seaTable'); // adds 1st, 2nd 3rd positions
         newfunction('seaTable'); //corrects format to 00:00:00
+       
         </script>
   </body>
 </html>
