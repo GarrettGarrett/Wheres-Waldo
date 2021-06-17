@@ -136,7 +136,7 @@
                   <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
                   </span>
               
-                  <table id='seaTable' class="highlight">
+                  <table id='gluttonTable' class="highlight">
                           <thead>
                               <tr>
                                   <th>Position</th>
@@ -192,7 +192,7 @@
                   <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
                   </span>
               
-                  <table id='seaTable' class="highlight">
+                  <table id='townTable' class="highlight">
                           <thead>
                               <tr>
                                   <th>Position</th>
@@ -248,7 +248,7 @@
           <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
           </span>
       
-          <table id='seaTable' class="highlight">
+          <table id='fortressTable' class="highlight">
                   <thead>
                       <tr>
                           <th>Position</th>
@@ -302,7 +302,7 @@
           <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
           </span>
       
-          <table id='seaTable' class="highlight">
+          <table id='middleagesTable' class="highlight">
                   <thead>
                       <tr>
                           <th>Position</th>
@@ -356,7 +356,7 @@
           <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
           </span>
       
-          <table id='seaTable' class="highlight">
+          <table id='undergroundTable' class="highlight">
                   <thead>
                       <tr>
                           <th>Position</th>
@@ -410,7 +410,7 @@
           <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
           </span>
       
-          <table id='seaTable' class="highlight">
+          <table id='forestTable' class="highlight">
                   <thead>
                       <tr>
                           <th>Position</th>
@@ -464,7 +464,7 @@
           <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
           </span>
       
-          <table id='seaTable' class="highlight">
+          <table id='giantsTable' class="highlight">
                   <thead>
                       <tr>
                           <th>Position</th>
@@ -518,7 +518,7 @@
           <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
           </span>
       
-          <table id='seaTable' class="highlight">
+          <table id='movieTable' class="highlight">
                   <thead>
                       <tr>
                           <th>Position</th>
@@ -572,7 +572,7 @@
           <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
           </span>
       
-          <table id='seaTable' class="highlight">
+          <table id='athleticsTable' class="highlight">
                   <thead>
                       <tr>
                           <th>Position</th>
@@ -626,7 +626,7 @@
           <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
           </span>
       
-          <table id='seaTable' class="highlight">
+          <table id='mazeTable' class="highlight">
                   <thead>
                       <tr>
                           <th>Position</th>
@@ -680,7 +680,7 @@
           <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
           </span>
       
-          <table id='seaTable' class="highlight">
+          <table id='spaceTable' class="highlight">
                   <thead>
                       <tr>
                           <th>Position</th>
@@ -733,7 +733,7 @@
           <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
           </span>
       
-          <table id='seaTable' class="highlight">
+          <table id='skiTable' class="highlight">
                   <thead>
                       <tr>
                           <th>Position</th>
@@ -787,7 +787,7 @@
           <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
           </span>
       
-          <table id='seaTable' class="highlight">
+          <table id='brawlTable' class="highlight">
                   <thead>
                       <tr>
                           <th>Position</th>
@@ -841,7 +841,7 @@
           <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
           </span>
       
-          <table id='seaTable' class="highlight">
+          <table id='midievalTable' class="highlight">
                   <thead>
                       <tr>
                           <th>Position</th>
@@ -1017,11 +1017,15 @@
             console.log("edit username clicked")
             document.forms['usernameForm'].submit();
         }
- 
-        sortTableByScore('seaTable'); //re arranges table by their score, before hh:mm:ss
-        assignPositionToTable('seaTable'); // adds 1st, 2nd 3rd positions
-        resultsScore('resultScore')
-        newfunction('seaTable'); //corrects format to 00:00:00
+        
+        const tableIDArray = ["seaTable", "gluttonTable", "townTable", "fortressTable", "middleagesTable", "undergroundTable","forestTable", "giantsTable", "movieTable", "athleticsTable", "mazeTable", "spaceTable", "skiTable", "brawlTable", "midievalTable"]
+        
+        tableIDArray.forEach(element => sortTableByScore(element)) //re arranges table by their score, before HH:MM:SS
+        tableIDArray.forEach(element => assignPositionToTable(element))// adds 1st, 2nd 3rd positions
+        tableIDArray.forEach(element => newfunction(element)) //corrects format to HH:MM:SS
+        
+        resultsScore('resultScore') //change latest score format to HH:MM:SS
+        
         
         </script>
   </body>
