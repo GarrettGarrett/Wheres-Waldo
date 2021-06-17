@@ -81,6 +81,125 @@ router.put("/:id/foundWaldo/sea", (req, res) => {
 	})
 
 
+
+// Edit -  Found Waldo Town
+router.put("/:id/foundWaldo/town", (req, res) => {
+	Player.findById(req.params.id, (error, foundPlayer) => {
+		Player.findByIdAndUpdate(req.params.id, { townscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+			});
+        });
+	})
+
+// Edit -  Found Waldo Sea gobbler
+router.put("/:id/foundWaldo/gobbler", (req, res) => {
+	Player.findById(req.params.id, (error, foundPlayer) => {
+		Player.findByIdAndUpdate(req.params.id, { globblingscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+			});
+        });
+	})
+
+// Edit -  Found Waldo Fortress
+router.put("/:id/foundWaldo/fortress", (req, res) => {
+	Player.findById(req.params.id, (error, foundPlayer) => {
+		Player.findByIdAndUpdate(req.params.id, { fortressscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+			});
+        });
+	})
+
+// Edit -  Found Waldo Middle Ages
+router.put("/:id/foundWaldo/middleages", (req, res) => {
+	Player.findById(req.params.id, (error, foundPlayer) => {
+		Player.findByIdAndUpdate(req.params.id, { middleagesscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+			});
+        });
+	})
+    
+// Edit -  Found Waldo Underground
+router.put("/:id/foundWaldo/underground", (req, res) => {
+	Player.findById(req.params.id, (error, foundPlayer) => {
+		Player.findByIdAndUpdate(req.params.id, { undergroundscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+			});
+        });
+	})
+
+// Edit -  Found Waldo Giants
+router.put("/:id/foundWaldo/giants", (req, res) => {
+Player.findById(req.params.id, (error, foundPlayer) => {
+    Player.findByIdAndUpdate(req.params.id, { giantsscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+        res.redirect(`/${req.params.id}/Dashboard`);
+        });
+    });
+})
+
+
+// Edit -  Found Waldo Movie
+router.put("/:id/foundWaldo/movie", (req, res) => {
+    Player.findById(req.params.id, (error, foundPlayer) => {
+        Player.findByIdAndUpdate(req.params.id, { moviescore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+            });
+        });
+    })
+// Edit -  Found Waldo Athletics
+router.put("/:id/foundWaldo/athletics", (req, res) => {
+    Player.findById(req.params.id, (error, foundPlayer) => {
+        Player.findByIdAndUpdate(req.params.id, { athleticsscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+            });
+        });
+    })
+
+// Edit -  Found Waldo Maze
+router.put("/:id/foundWaldo/maze", (req, res) => {
+    Player.findById(req.params.id, (error, foundPlayer) => {
+        Player.findByIdAndUpdate(req.params.id, { mazescore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+            });
+        });
+    })
+
+
+// Edit -  Found Waldo Space
+router.put("/:id/foundWaldo/space", (req, res) => {
+    Player.findById(req.params.id, (error, foundPlayer) => {
+        Player.findByIdAndUpdate(req.params.id, { spacescore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+            });
+        });
+    })
+
+// Edit -  Found Waldo Ski
+router.put("/:id/foundWaldo/ski", (req, res) => {
+    Player.findById(req.params.id, (error, foundPlayer) => {
+        Player.findByIdAndUpdate(req.params.id, { skiscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+            });
+        });
+    })
+
+// Edit -  Found Waldo Brawl
+router.put("/:id/foundWaldo/brawl", (req, res) => {
+    Player.findById(req.params.id, (error, foundPlayer) => {
+        Player.findByIdAndUpdate(req.params.id, { brawlscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+            });
+        });
+    })
+
+// Edit -  Found Waldo Midieval
+router.put("/:id/foundWaldo/midieval", (req, res) => {
+    Player.findById(req.params.id, (error, foundPlayer) => {
+        Player.findByIdAndUpdate(req.params.id, { midievalscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+            });
+        });
+    })
+
 // Edit - username
 router.put("/:id/edit", (req, res) => {
 	Player.findById(req.params.id, (error, foundPlayer) => {

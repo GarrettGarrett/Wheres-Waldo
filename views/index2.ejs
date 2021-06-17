@@ -10,62 +10,894 @@
   </head>
 
   <body>
-<div class="container">
+      <!-- ----------------------------------------------------------------------- -->
+    <div class="container">
+    <div class="row">
+     <!-- --------------------------------SEA--------------------------------------- -->
 
-    <div class="card">
-        <div class="card-image waves-effect waves-block waves-light" >
-          <img id='cards' class="activator" src="https://i.imgur.com/h2rW50u.jpeg">
+
+        <div class="col s6"> <div class="card">
+            <div class="card-image waves-effect waves-block waves-light" >
+            <img id='cards' class="activator" src="https://i.imgur.com/h2rW50u.jpeg">
+            </div>
+
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Sea<i class="material-icons right">more_vert</i>
+                </span>
+
+            <form action="/createPlayer?_method=PUT" method="POST" href=''>
+                
+                <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+                
+                <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+                <input type='hidden' type="text" name="location" value='sea'/>
+
+                <input type="submit" value="PLAY" id='' />
+            </form>
+            
         </div>
 
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Under The Sea<i class="material-icons right">more_vert</i></span>
-
-          <form action="/createPlayer?_method=PUT" method="POST" href=''>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+                </span>
             
-            <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+                <table id='seaTable' class="highlight">
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Time</th>
+                                <th>User</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody class='hiscore'>
+                        <% for(let i = 0; i < players.length; i++) { %>
+                        <% if (players[i].seascore > 0) { %>
+                            <tr>
+                            <td> <%= i + 1 %> </td>
+                            <td><%= players[i].seascore %></td>
+                            <td><%= players[i].username %></td>
+                            </tr>
+                        <% } %> 
+                        <% } %> 
+                        </tbody>
+
+                </table>
+
+            </div>
+        </div>
+</div>
+
+<!-- ----------------------------------Glutton------------------------------------- -->
+
+        <div class="col s6"> <div class="card">
+            <div class="card-image waves-effect waves-block waves-light" >
+            <img id='cards' class="activator" src="https://i.imgur.com/lXLN6qI.jpeg">
+            </div>
+    
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Gobbling Gluttons<i class="material-icons right">more_vert</i>
+                </span>
+    
+            <form action="/createPlayer?_method=PUT" method="POST" href=''>
+                
+                <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+                
+                <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+    
+                <input type='hidden' type="text" name="location" value='gobbling'/>
+    
+                <input type="submit" value="PLAY" id='' />
+            </form>
             
-            <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+        </div>
+    
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+                </span>
+            
+                <table id='seaTable' class="highlight">
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Time</th>
+                                <th>User</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody class='hiscore'>
+                        <% for(let i = 0; i < players.length; i++) { %>
+                        <% if (players[i].gobblingscore > 0) { %>
+                            <tr>
+                            <td> <%= i + 1 %> </td>
+                            <td><%= players[i].gobblingscore %></td>
+                            <td><%= players[i].username %></td>
+                            </tr>
+                        <% } %> 
+                        <% } %> 
+                        </tbody>
+    
+                </table>
+    
+            </div>
+        </div>
+    </div>
+<!-- ----------------------------------------------------------------------- -->
+ <!-- --------------------------------Around Town--------------------------------------- -->
 
-            <input type='hidden' type="text" name="location" value='Sea'/>
+     
+        <div class="col s6"> <div class="card">
+            <div class="card-image waves-effect waves-block waves-light" >
+            <img id='cards' class="activator" src="https://i.imgur.com/aE4bjhX.png">
+            </div>
 
-            <input type="submit" value="PLAY" id='' />
-        </form>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Around Town<i class="material-icons right">more_vert</i>
+                </span>
+
+            <form action="/createPlayer?_method=PUT" method="POST" href=''>
+                
+                <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+                
+                <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+                <input type='hidden' type="text" name="location" value='town'/>
+
+                <input type="submit" value="PLAY" id='' />
+            </form>
+            
         </div>
 
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i></span>
-          
-          <table id='seaTable' class="highlight">
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+                </span>
+            
+                <table id='seaTable' class="highlight">
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Time</th>
+                                <th>User</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody class='hiscore'>
+                        <% for(let i = 0; i < players.length; i++) { %>
+                        <% if (players[i].townscore > 0) { %>
+                            <tr>
+                            <td> <%= i + 1 %> </td>
+                            <td><%= players[i].townscore %></td>
+                            <td><%= players[i].username %></td>
+                            </tr>
+                        <% } %> 
+                        <% } %> 
+                        </tbody>
+
+                </table>
+
+            </div>
+        </div>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
+
+<!-- -----------------------------------Fortress------------------------------------ -->
+<div class="col s6"> <div class="card">
+    <div class="card-image waves-effect waves-block waves-light" >
+    <img id='cards' class="activator" src="https://i.imgur.com/R7yC6nG.jpeg">
+    </div>
+
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Fortress<i class="material-icons right">more_vert</i>
+        </span>
+
+    <form action="/createPlayer?_method=PUT" method="POST" href=''>
+        
+        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+        
+        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+        <input type='hidden' type="text" name="location" value='fortress'/>
+
+        <input type="submit" value="PLAY" id='' />
+    </form>
+    
+</div>
+
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+        </span>
+    
+        <table id='seaTable' class="highlight">
                 <thead>
                     <tr>
                         <th>Position</th>
                         <th>Time</th>
                         <th>User</th>
                     </tr>
-                  </thead>
-          
-                  <tbody class='hiscore'>
-                
-
+                </thead>
+        
+                <tbody class='hiscore'>
                 <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].location === "Sea") { %>
+                <% if (players[i].fortressscore > 0) { %>
                     <tr>
-                      <td> <%= i + 1 %> </td>
-                      <td><%= players[i].score %></td>
-                      <td><%= players[i].username %></td>
+                    <td> <%= i + 1 %> </td>
+                    <td><%= players[i].fortressscore %></td>
+                    <td><%= players[i].username %></td>
                     </tr>
                 <% } %> 
                 <% } %> 
-                  </tbody>
+                </tbody>
 
+        </table>
 
-        </div>
-      </div>
-
-
-
-
+    </div>
 </div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- -----------------------------Middle Ages------------------------------- -->
+<div class="col s6"> <div class="card">
+    <div class="card-image waves-effect waves-block waves-light" >
+    <img id='cards' class="activator" src="https://i.imgur.com/Uf7AW8t.jpeg">
+    </div>
+
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Middle Ages<i class="material-icons right">more_vert</i>
+        </span>
+
+    <form action="/createPlayer?_method=PUT" method="POST" href=''>
+        
+        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+        
+        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+        <input type='hidden' type="text" name="location" value='middleages'/>
+
+        <input type="submit" value="PLAY" id='' />
+    </form>
+    
+</div>
+
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+        </span>
+    
+        <table id='seaTable' class="highlight">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+        
+                <tbody class='hiscore'>
+                <% for(let i = 0; i < players.length; i++) { %>
+                <% if (players[i].middleagesscore > 0) { %>
+                    <tr>
+                    <td> <%= i + 1 %> </td>
+                    <td><%= players[i].middleagesscore %></td>
+                    <td><%= players[i].username %></td>
+                    </tr>
+                <% } %> 
+                <% } %> 
+                </tbody>
+
+        </table>
+
+    </div>
+</div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------Underground--------------------------------- -->
+<div class="col s6"> <div class="card">
+    <div class="card-image waves-effect waves-block waves-light" >
+    <img id='cards' class="activator" src="https://i.imgur.com/UDlUbGx.jpeg">
+    </div>
+
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Underground<i class="material-icons right">more_vert</i>
+        </span>
+
+    <form action="/createPlayer?_method=PUT" method="POST" href=''>
+        
+        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+        
+        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+        <input type='hidden' type="text" name="location" value='underground'/>
+
+        <input type="submit" value="PLAY" id='' />
+    </form>
+    
+</div>
+
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+        </span>
+    
+        <table id='seaTable' class="highlight">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+        
+                <tbody class='hiscore'>
+                <% for(let i = 0; i < players.length; i++) { %>
+                <% if (players[i].undergroundscre > 0) { %>
+                    <tr>
+                    <td> <%= i + 1 %> </td>
+                    <td><%= players[i].undergroundscre %></td>
+                    <td><%= players[i].username %></td>
+                    </tr>
+                <% } %> 
+                <% } %> 
+                </tbody>
+
+        </table>
+
+    </div>
+</div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------Fighting Foresters------------------------- -->
+<div class="col s6"> <div class="card">
+    <div class="card-image waves-effect waves-block waves-light" >
+    <img id='cards' class="activator" src="https://i.imgur.com/fAdxAN5.jpeg">
+    </div>
+
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Foresters<i class="material-icons right">more_vert</i>
+        </span>
+
+    <form action="/createPlayer?_method=PUT" method="POST" href=''>
+        
+        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+        
+        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+        <input type='hidden' type="text" name="location" value='foresters'/>
+
+        <input type="submit" value="PLAY" id='' />
+    </form>
+    
+</div>
+
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+        </span>
+    
+        <table id='seaTable' class="highlight">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+        
+                <tbody class='hiscore'>
+                <% for(let i = 0; i < players.length; i++) { %>
+                <% if (players[i].forestersscore > 0) { %>
+                    <tr>
+                    <td> <%= i + 1 %> </td>
+                    <td><%= players[i].forestersscore %></td>
+                    <td><%= players[i].username %></td>
+                    </tr>
+                <% } %> 
+                <% } %> 
+                </tbody>
+
+        </table>
+
+    </div>
+</div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------UnFriendly Giants-------------------------- -->
+<div class="col s6"> <div class="card">
+    <div class="card-image waves-effect waves-block waves-light" >
+    <img id='cards' class="activator" src="https://i.imgur.com/yiPMpD2.jpeg">
+    </div>
+
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">UnFriendly Giants<i class="material-icons right">more_vert</i>
+        </span>
+
+    <form action="/createPlayer?_method=PUT" method="POST" href=''>
+        
+        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+        
+        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+        <input type='hidden' type="text" name="location" value='giants'/>
+
+        <input type="submit" value="PLAY" id='' />
+    </form>
+    
+</div>
+
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+        </span>
+    
+        <table id='seaTable' class="highlight">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+        
+                <tbody class='hiscore'>
+                <% for(let i = 0; i < players.length; i++) { %>
+                <% if (players[i].giantsscore > 0) { %>
+                    <tr>
+                    <td> <%= i + 1 %> </td>
+                    <td><%= players[i].giantsscore %></td>
+                    <td><%= players[i].username %></td>
+                    </tr>
+                <% } %> 
+                <% } %> 
+                </tbody>
+
+        </table>
+
+    </div>
+</div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ------------------------------Silent Movie------------------------------ -->
+<div class="col s6"> <div class="card">
+    <div class="card-image waves-effect waves-block waves-light" >
+    <img id='cards' class="activator" src="https://i.imgur.com/KSYXCo9.jpeg">
+    </div>
+
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Silent Movie<i class="material-icons right">more_vert</i>
+        </span>
+
+    <form action="/createPlayer?_method=PUT" method="POST" href=''>
+        
+        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+        
+        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+        <input type='hidden' type="text" name="location" value='movie'/>
+
+        <input type="submit" value="PLAY" id='' />
+    </form>
+    
+</div>
+
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+        </span>
+    
+        <table id='seaTable' class="highlight">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+        
+                <tbody class='hiscore'>
+                <% for(let i = 0; i < players.length; i++) { %>
+                <% if (players[i].moviescore > 0) { %>
+                    <tr>
+                    <td> <%= i + 1 %> </td>
+                    <td><%= players[i].moviescore %></td>
+                    <td><%= players[i].username %></td>
+                    </tr>
+                <% } %> 
+                <% } %> 
+                </tbody>
+
+        </table>
+
+    </div>
+</div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- -----------------------------Atheletics-------------------------------- -->
+<div class="col s6"> <div class="card">
+    <div class="card-image waves-effect waves-block waves-light" >
+    <img id='cards' class="activator" src="https://i.imgur.com/QvduzDM.jpeg">
+    </div>
+
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Athletics<i class="material-icons right">more_vert</i>
+        </span>
+
+    <form action="/createPlayer?_method=PUT" method="POST" href=''>
+        
+        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+        
+        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+        <input type='hidden' type="text" name="location" value='athletics'/>
+
+        <input type="submit" value="PLAY" id='' />
+    </form>
+    
+</div>
+
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+        </span>
+    
+        <table id='seaTable' class="highlight">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+        
+                <tbody class='hiscore'>
+                <% for(let i = 0; i < players.length; i++) { %>
+                <% if (players[i].athleticsscore > 0) { %>
+                    <tr>
+                    <td> <%= i + 1 %> </td>
+                    <td><%= players[i].athleticsscore %></td>
+                    <td><%= players[i].username %></td>
+                    </tr>
+                <% } %> 
+                <% } %> 
+                </tbody>
+
+        </table>
+
+    </div>
+</div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ------------------------------Maze-------------------------------------- -->
+<div class="col s6"> <div class="card">
+    <div class="card-image waves-effect waves-block waves-light" >
+    <img id='cards' class="activator" src="https://i.imgur.com/WwJXwBa.jpeg">
+    </div>
+
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Maze<i class="material-icons right">more_vert</i>
+        </span>
+
+    <form action="/createPlayer?_method=PUT" method="POST" href=''>
+        
+        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+        
+        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+        <input type='hidden' type="text" name="location" value='maze'/>
+
+        <input type="submit" value="PLAY" id='' />
+    </form>
+    
+</div>
+
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+        </span>
+    
+        <table id='seaTable' class="highlight">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+        
+                <tbody class='hiscore'>
+                <% for(let i = 0; i < players.length; i++) { %>
+                <% if (players[i].mazescore > 0) { %>
+                    <tr>
+                    <td> <%= i + 1 %> </td>
+                    <td><%= players[i].mazescore %></td>
+                    <td><%= players[i].username %></td>
+                    </tr>
+                <% } %> 
+                <% } %> 
+                </tbody>
+
+        </table>
+
+    </div>
+</div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- -------------------------------Space----------------------------------- -->
+<div class="col s6"> <div class="card">
+    <div class="card-image waves-effect waves-block waves-light" >
+    <img id='cards' class="activator" src="https://i.imgur.com/NYM1HT5.jpeg">
+    </div>
+
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Outer Space<i class="material-icons right">more_vert</i>
+        </span>
+
+    <form action="/createPlayer?_method=PUT" method="POST" href=''>
+        
+        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+        
+        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+        <input type='hidden' type="text" name="location" value='space'/>
+
+        <input type="submit" value="PLAY" id='' />
+    </form>
+    
+</div>
+
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+        </span>
+    
+        <table id='seaTable' class="highlight">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+        
+                <tbody class='hiscore'>
+                <% for(let i = 0; i < players.length; i++) { %>
+                <% if (players[i].spacescore > 0) { %>
+                    <tr>
+                    <td> <%= i + 1 %> </td>
+                    <td><%= players[i].spacescore %></td>
+                    <td><%= players[i].username %></td>
+                    </tr>
+                <% } %> 
+                <% } %> 
+                </tbody>
+
+        </table>
+
+    </div>
+</div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------Ski Trip----------------------------------- -->
+<div class="col s6"> <div class="card">
+    <div class="card-image waves-effect waves-block waves-light" >
+    <img id='cards' class="activator" src="https://i.imgur.com/R14wDip.jpeg">
+    </div>
+
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Ski Trip<i class="material-icons right">more_vert</i>
+        </span>
+
+    <form action="/createPlayer?_method=PUT" method="POST" href=''>
+        
+        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+        
+        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+        <input type='hidden' type="text" name="location" value='ski'/>
+
+        <input type="submit" value="PLAY" id='' />
+    </form>
+    
+</div>
+
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+        </span>
+    
+        <table id='seaTable' class="highlight">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+        
+                <tbody class='hiscore'>
+                <% for(let i = 0; i < players.length; i++) { %>
+                <% if (players[i].skiscore > 0) { %>
+                    <tr>
+                    <td> <%= i + 1 %> </td>
+                    <td><%= players[i].skiscore %></td>
+                    <td><%= players[i].username %></td>
+                    </tr>
+                <% } %> 
+                <% } %> 
+                </tbody>
+
+        </table>
+
+    </div>
+</div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- -----------------------------Brawl-------------------------------------- -->
+<div class="col s6"> <div class="card">
+    <div class="card-image waves-effect waves-block waves-light" >
+    <img id='cards' class="activator" src="https://i.imgur.com/VdLv6QP.jpeg">
+    </div>
+
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Brawl<i class="material-icons right">more_vert</i>
+        </span>
+
+    <form action="/createPlayer?_method=PUT" method="POST" href=''>
+        
+        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+        
+        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+        <input type='hidden' type="text" name="location" value='brawl'/>
+
+        <input type="submit" value="PLAY" id='' />
+    </form>
+    
+</div>
+
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+        </span>
+    
+        <table id='seaTable' class="highlight">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+        
+                <tbody class='hiscore'>
+                <% for(let i = 0; i < players.length; i++) { %>
+                <% if (players[i].brawlscore > 0) { %>
+                    <tr>
+                    <td> <%= i + 1 %> </td>
+                    <td><%= players[i].brawlscore %></td>
+                    <td><%= players[i].username %></td>
+                    </tr>
+                <% } %> 
+                <% } %> 
+                </tbody>
+
+        </table>
+
+    </div>
+</div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ------------------------------Midieval--------------------------------- -->
+<div class="col s6"> <div class="card">
+    <div class="card-image waves-effect waves-block waves-light" >
+    <img id='cards' class="activator" src="https://i.imgur.com/lQBvBRL.jpeg">
+    </div>
+
+    <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4">Midieval<i class="material-icons right">more_vert</i>
+        </span>
+
+    <form action="/createPlayer?_method=PUT" method="POST" href=''>
+        
+        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+        
+        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+
+        <input type='hidden' type="text" name="location" value='midieval'/>
+
+        <input type="submit" value="PLAY" id='' />
+    </form>
+    
+</div>
+
+    <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+        </span>
+    
+        <table id='seaTable' class="highlight">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                </thead>
+        
+                <tbody class='hiscore'>
+                <% for(let i = 0; i < players.length; i++) { %>
+                <% if (players[i].midievalscore > 0) { %>
+                    <tr>
+                    <td> <%= i + 1 %> </td>
+                    <td><%= players[i].midievalscore %></td>
+                    <td><%= players[i].username %></td>
+                    </tr>
+                <% } %> 
+                <% } %> 
+                </tbody>
+
+        </table>
+
+    </div>
+</div>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ---------------------------closing cards div---------------------------- -->
+      </div>
+    <!-- -------------------------------------------------------------- -->
+
+
+           
+
+
+
+    <!-- -------------------------------------------------------------- -->
+
+    <!-- -------------------------------------------------------------- -->
+
+
+   
+
+
+
+
+        <!-- -------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

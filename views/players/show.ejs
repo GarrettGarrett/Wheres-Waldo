@@ -30,7 +30,7 @@
         </main>
 
 
-    <% } else if (randNum === 2) { %>
+    <% } else if (player.location === "gobbling") { %>
         <main>
             <img src= 'https://i.imgur.com/lXLN6qI.jpeg' alt="Waldo" usemap="#waldomap">
     
@@ -40,7 +40,7 @@
             </map>
         </main>
 
-    <% } else if (randNum === 3) { %>
+    <% } else if (player.location === "town") { %>
         <main>
             <img src= 'https://i.imgur.com/aE4bjhX.png' alt="Waldo" usemap="#waldomap">
     
@@ -50,7 +50,7 @@
             </map>
         </main>
 
-    <% } else if (randNum === 4) { %>
+    <% } else if (player.location === "fortress") { %>
         <main>
             <img src= 'https://i.imgur.com/R7yC6nG.jpeg' alt="Waldo" usemap="#waldomap">
     
@@ -60,8 +60,7 @@
             </map>
         </main>
 
-
-    <% } else if (randNum === 5) { %>
+    <% } else if (player.location === "middleages") { %>
         <main>
             <img src= 'https://i.imgur.com/Uf7AW8t.jpeg' alt="Waldo" usemap="#waldomap">
     
@@ -71,7 +70,7 @@
             </map>
         </main>
 
-    <% } else if (randNum === 6) { %>
+    <% } else if (player.location === "underground") { %>
         <main>
             <img src= 'https://i.imgur.com/UDlUbGx.jpeg' alt="Waldo" usemap="#waldomap">
     
@@ -82,9 +81,9 @@
         </main>
 
     
-    <% } else if (randNum === 7) { %>
+    <% } else if (player.location === "giants") { %>       
         <main>
-            <img src= 'https://i.imgur.com/fAdxAN5.jpeg' alt="Waldo" usemap="#waldomap">
+            <img src= 'https://i.imgur.com/yiPMpD2.jpeg' alt="Waldo" usemap="#waldomap">
     
             <map name="waldomap">
                 <area shape="rect" coords="1443,1621,1464,1666"  alt="waldo" href="/<%= player._id %>/preDashboard" 
@@ -93,9 +92,9 @@
         </main>
 
 
-    <% } else if (randNum === 8) { %>
+        <% } else if (player.location === "foresters") { %>  
         <main>
-            <img src= 'https://i.imgur.com/yiPMpD2.jpeg' alt="Waldo" usemap="#waldomap">
+            <img src= 'https://i.imgur.com/fAdxAN5.jpeg' alt="Waldo" usemap="#waldomap">
     
             <map name="waldomap">
                 <area shape="rect" coords="2446,1770,2468,1817"  alt="waldo" href="/<%= player._id %>/preDashboard" 
@@ -104,7 +103,7 @@
         </main>
 
 
-    <% } else if (randNum === 9) { %>
+    <% } else if (player.location === "movie") { %>   
         <main>
             <img src= 'https://i.imgur.com/KSYXCo9.jpeg' alt="Waldo" usemap="#waldomap">
     
@@ -114,7 +113,7 @@
             </map>
         </main>
 
-    <% } else if (randNum === 10) { %>
+    <% } else if (player.location === "athletics") { %>   
     <main>
         <img src= 'https://i.imgur.com/QvduzDM.jpeg' alt="Waldo" usemap="#waldomap">
 
@@ -124,8 +123,7 @@
         </map>
     </main>
 
-
-    <% } else if (randNum === 11) { %>
+<% } else if (player.location === "maze") { %>   
     <main>
         <img src= 'https://i.imgur.com/WwJXwBa.jpeg' alt="Waldo" usemap="#waldomap">
 
@@ -135,7 +133,7 @@
         </map>
     </main>
 
-    <% } else if (randNum === 12) { %>
+<% } else if (player.location === "space") { %>  
     <main>
         <img src= 'https://i.imgur.com/NYM1HT5.jpeg' alt="Waldo" usemap="#waldomap">
 
@@ -145,7 +143,7 @@
         </map>
     </main>
 
-    <% } else if (randNum === 13) { %>
+<% } else if (player.location === "ski") { %>  
     <main>
         <img src= 'https://i.imgur.com/R14wDip.jpeg' alt="Waldo" usemap="#waldomap">
 
@@ -155,7 +153,7 @@
         </map>
     </main>
 
-    <% } else if (randNum === 14) { %>
+<% } else if (player.location === "brawl") { %>  
     <main>
         <img src= 'https://i.imgur.com/VdLv6QP.jpeg' alt="Waldo" usemap="#waldomap">
 
@@ -165,7 +163,7 @@
         </map>
     </main>
 
-    <% } else if (randNum === 15) { %>
+<% } else if (player.location === "midieval") { %>  
     <main>
         <img src= 'https://i.imgur.com/lQBvBRL.jpeg' alt="Waldo" usemap="#waldomap">
 

@@ -9,15 +9,67 @@
         <h1>Index Page</h1>
     </header>
     <main>
+    <% if (player.location === "sea") { %> 
         <form id='form1' action="/<%= player._id %>/foundWaldo/sea?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "gobbling") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/gobbling?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "town") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/town?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "fortress") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/fortress?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "middleages") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/middleages?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "underground") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/underground?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "foresters") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/foresters?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "giants") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/giants?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+    
+    <% } else if (player.location === "movie") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/movie?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "athletics") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/athletics?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "maze") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/maze?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "space") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/space?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "ski") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/ski?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "brawl") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/brawl?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+
+    <% } else if (player.location === "midieval") { %> 
+        <form id='form1' action="/<%= player._id %>/foundWaldo/midieval?_method=PUT" method="POST" href='/<%= player._id %> /preDashboard'>
+    
+    <% } %> 
+
+
+
+
+
+
+
+
+
+
+
 
 
             <input type='hidden' type="text" name="score" value='5'/>
             
-
-
-
-
         </form>
 
     
