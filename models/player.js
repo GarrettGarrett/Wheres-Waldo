@@ -8,7 +8,7 @@ const playerSchema = new Schema({
     username: String,
     score: String,
     seascore: String,
-    globblingscore: String,
+    gobblingscore: String,
     townscore: String,
     fortressscore: String,
     middleagesscore: String,

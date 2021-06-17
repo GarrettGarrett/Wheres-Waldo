@@ -92,9 +92,9 @@ router.put("/:id/foundWaldo/town", (req, res) => {
 	})
 
 // Edit -  Found Waldo Sea gobbler
-router.put("/:id/foundWaldo/gobbler", (req, res) => {
+router.put("/:id/foundWaldo/gobbling", (req, res) => {
 	Player.findById(req.params.id, (error, foundPlayer) => {
-		Player.findByIdAndUpdate(req.params.id, { globblingscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+		Player.findByIdAndUpdate(req.params.id, { gobblingscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
             res.redirect(`/${req.params.id}/Dashboard`);
 			});
         });
