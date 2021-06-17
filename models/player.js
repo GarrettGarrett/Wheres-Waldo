@@ -7,8 +7,10 @@ const Schema = mongoose.Schema;
 const playerSchema = new Schema({
     username: String,
     score: String,
+    seascore: String,
     startTime: Date,
-    endTime: Date
+    endTime: Date,
+    location: String
 }, {
     timestamps: true
 });

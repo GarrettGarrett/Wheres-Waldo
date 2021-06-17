@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
     <link rel="stylesheet" type="text/css"   href="/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <title>Where's Waldo</title>
-</head>
-<body>
-    <header>
-        <center>
-            <h1>Where's Waldo</h1>
-        </center>
-        
-    </header>
-    <main>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
 
+  <body>
+<div class="container">
 
+    <div class="card">
+        <div class="card-image waves-effect waves-block waves-light" >
+          <img id='cards' class="activator" src="https://i.imgur.com/h2rW50u.jpeg">
+        </div>
 
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Under The Sea<i class="material-icons right">more_vert</i></span>
 
+          <form action="/createPlayer?_method=PUT" method="POST" href=''>
+            
+            <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
+            
+            <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
 
+            <input type='hidden' type="text" name="location" value='Sea'/>
 
-        <center>
-            <h4>HIGHSCORES</h4>
-        </center>
-           
-            <table class="striped" id='myTable'>
+            <input type="submit" value="PLAY" id='' />
+        </form>
+        </div>
+
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i></span>
+          
+          <table id='seaTable' class="highlight">
                 <thead>
                     <tr>
                         <th>Position</th>
@@ -35,49 +45,36 @@
                   </thead>
           
                   <tbody class='hiscore'>
+                
+
                 <% for(let i = 0; i < players.length; i++) { %>
+                <% if (players[i].location === "Sea") { %>
                     <tr>
                       <td> <%= i + 1 %> </td>
                       <td><%= players[i].score %></td>
                       <td><%= players[i].username %></td>
                     </tr>
-                    
+                <% } %> 
                 <% } %> 
                   </tbody>
 
 
-            </table>
+        </div>
+      </div>
 
 
 
 
+</div>
 
 
 
 
-            
-
-   
-
-
-
-
-<center>
-    <form action="/createPlayer?_method=PUT" method="POST" href=''>
-            
-        <input type='hidden' type="text" name="username" value="<%= randomUser %>"/>
-        
-        <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
-        <input type="submit" value="PLAY" id='' />
-    </form>
-</center>
-
-    </main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        function sortTableByScore() {
+        function sortTableByScore(tableid) {
           var table, rows, switching, i, x, y, shouldSwitch;
-          table = document.getElementById("myTable");
+          table = document.getElementById(tableid);
           switching = true;
           /*Make a loop that will continue until
           no switching has been done:*/
@@ -110,8 +107,8 @@
           }
         }
 
-        function assignPositionToTable() {
-            var table = document.getElementById('myTable');
+        function assignPositionToTable(tableid) {
+            var table = document.getElementById(tableid);
             var targetTDs = table.querySelectorAll('tr > td:first-child');
             for (var i = 0; i < targetTDs.length; i++) {
                 var td = targetTDs[i];
@@ -134,8 +131,8 @@
         }
         
 
-        function newfunction() {
-            var table = document.getElementById('myTable');
+        function newfunction(tableid) {
+            var table = document.getElementById(tableid);
             var targetTDs = table.querySelectorAll('tr > td:not(:first-child):not(:last-child)');
             for (var i = 0; i < targetTDs.length; i++) {
                 var td = targetTDs[i];
@@ -165,13 +162,10 @@
             document.forms['usernameForm'].submit();
         }
  
-        sortTableByScore();
-        assignPositionToTable();
-        newfunction();
+        sortTableByScore('seaTable'); //re arranges table by their score, before hh:mm:ss
+        assignPositionToTable('seaTable'); // adds 1st, 2nd 3rd positions
+        newfunction('seaTable'); //corrects format to 00:00:00
         </script>
-
-
-
-    
-</body>
+  </body>
 </html>
+      

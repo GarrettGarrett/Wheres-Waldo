@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css"   href="/css/style.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+
+<div class="container">
+
+    <center>
+        <h4>Your Score</h4>
+    </center>
+    
+    <table>
+        <thead>
+        <tr>
+            <th>Time</th>
+            <th>Name</th>
+            <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+            <tr>
+            <td id='resultScore'><%= player.score %>  </td>
+            <td>
+                <form action="/<%= player._id %>/edit?_method=PUT" method="POST" href=''>
+                    <input id='newUserName' type="text" name="username" value="<%= player.username %>"  >
+                <td>
+                    <input type="submit" value="Change Name" id='' />
+                </form>
+                <form action="/<%= player._id %>/Dashboard?_method=DELETE" method="POST">
+                 
+                    <input type="submit" value="Delete User" id='' />
+                </form>
+            </td>  
+            </td>
+            </tr>
+         
+    </tbody>
+</table>
+
+
+
+    <div class="card">
+        <div class="card-image waves-effect waves-block waves-light" >
+          <img id='cards' class="activator" src="https://i.imgur.com/h2rW50u.jpeg">
+        </div>
+
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Under The Sea<i class="material-icons right">more_vert</i></span>
+
+          <form action="/<%= player.id %>/playagain?_method=PUT" method="POST" href=''>
+                    
+                
+                
+            <input type='hidden' type="text" name="startTime" value='<%= new Date(Date.now()) %>'/>
+            <input type='hidden' type="text" name="location" value='Sea'/>
+            <input type="submit" value="PLAY" id='' />
+        </form>
+        </div>
+
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i></span>
+          
+          <table id='seaTable' class="highlight">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Time</th>
+                        <th>User</th>
+                    </tr>
+                  </thead>
+          
+                  <tbody class='hiscore'>
+                
+
+                <% for(let i = 0; i < allplayers.length; i++) { %>
+                <% if (allplayers[i].seascore > 0) { %>
+                    <tr>
+                      <td> <%= i + 1 %> </td>
+                      <td><%= allplayers[i].seascore %></td>
+                      <td><%= allplayers[i].username %></td>
+                    </tr>
+                <% } %> 
+                <% } %> 
+                  </tbody>
+
+
+        </div>
+      </div>
+
+
+
+
+</div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        function sortTableByScore(tableid) {
+          var table, rows, switching, i, x, y, shouldSwitch;
+          table = document.getElementById(tableid);
+          switching = true;
+          /*Make a loop that will continue until
+          no switching has been done:*/
+          while (switching) {
+            //start by saying: no switching is done:
+            switching = false;
+            rows = table.rows;
+            /*Loop through all table rows (except the
+            first, which contains table headers):*/
+            for (i = 1; i < (rows.length - 1); i++) {
+              //start by saying there should be no switching:
+              shouldSwitch = false;
+              /*Get the two elements you want to compare,
+              one from current row and one from the next:*/
+              x = rows[i].getElementsByTagName("TD")[1];
+              y = rows[i + 1].getElementsByTagName("TD")[1];
+              //check if the two rows should switch place:
+              if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                //if so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                break;
+              }
+            }
+            if (shouldSwitch) {
+              /*If a switch has been marked, make the switch
+              and mark that a switch has been done:*/
+              rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+              switching = true;
+            }
+          }
+        }
+
+        function assignPositionToTable(tableid) {
+            var table = document.getElementById(tableid);
+            var targetTDs = table.querySelectorAll('tr > td:first-child');
+            for (var i = 0; i < targetTDs.length; i++) {
+                var td = targetTDs[i];
+                td.innerHTML = `${i + 1}`
+                
+                };  
+        };
+
+         
+        var toHHMMSS = (secs) => { //convert seconds to HH:MM:SS format
+            var sec_num = parseInt(secs, 10)
+            var hours   = Math.floor(sec_num / 3600)
+            var minutes = Math.floor(sec_num / 60) % 60
+            var seconds = sec_num % 60
+
+            return [hours,minutes,seconds]
+                .map(v => v < 10 ? "0" + v : v)
+                .filter((v,i) => v !== "00" || i > 0)
+                .join(":")
+        }
+        
+
+        function newfunction(tableid) {
+            var table = document.getElementById(tableid);
+            var targetTDs = table.querySelectorAll('tr > td:not(:first-child):not(:last-child)');
+            for (var i = 0; i < targetTDs.length; i++) {
+                var td = targetTDs[i];
+
+                var toHHMMSS = (secs) => { //convert seconds to HH:MM:SS format
+                var sec_num = parseInt(secs, 10)
+                var hours   = Math.floor(sec_num / 3600)
+                var minutes = Math.floor(sec_num / 60) % 60
+                var seconds = sec_num % 60
+
+                return [hours,minutes,seconds]
+                    .map(v => v < 10 ? "0" + v : v)
+                    .filter((v,i) => v !== "00" || i > 0)
+                    .join(":")
+            }
+
+                // console.log(td.textContent)               
+                td.innerHTML = `${toHHMMSS(td.textContent)}`
+                
+                };  
+            };
+
+        function resultsScore(tableid) {
+            var toHHMMSS = (secs) => { //convert seconds to HH:MM:SS format
+                var sec_num = parseInt(secs, 10)
+                var hours   = Math.floor(sec_num / 3600)
+                var minutes = Math.floor(sec_num / 60) % 60
+                var seconds = sec_num % 60
+
+                return [hours,minutes,seconds]
+                    .map(v => v < 10 ? "0" + v : v)
+                    .filter((v,i) => v !== "00" || i > 0)
+                    .join(":")
+            }
+                latestScore = document.getElementById(tableid)
+                latestScore.innerHTML =  toHHMMSS(latestScore.textContent)      
+      
+            };  
+
+
+           
+        
+
+
+        function submitUsernameForm() {
+            console.log("edit username clicked")
+            document.forms['usernameForm'].submit();
+        }
+ 
+        sortTableByScore('seaTable'); //re arranges table by their score, before hh:mm:ss
+        assignPositionToTable('seaTable'); // adds 1st, 2nd 3rd positions
+        resultsScore('resultScore')
+        newfunction('seaTable'); //corrects format to 00:00:00
+        
+        </script>
+  </body>
+</html>
+      
