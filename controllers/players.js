@@ -46,7 +46,7 @@ router.get('/:id/dashboard', (req, res) => {
         Player.findById(req.params.id, (error, foundPlayer) => {
             res.render('./players/dashboard2.ejs', {
             player: foundPlayer,
-            allplayers: foundPlayers
+            players: foundPlayers
             
         });
 	})
@@ -212,7 +212,7 @@ router.put("/:id/edit", (req, res) => {
 // Edit - Play again 
 router.put("/:id/playAgain", (req, res) => {
 	Player.findById(req.params.id, (error, foundPlayer) => {
-		Player.findByIdAndUpdate(req.params.id, { startTime: new Date(Date.now()) }, {new:true}, (error, foundPlayer) => { 
+		Player.findByIdAndUpdate(req.params.id, { startTime: new Date(Date.now()), location: req.body.location }, {new:true}, (error, foundPlayer) => { 
 			res.redirect(`/${req.params.id}/`);
 			});
         });
