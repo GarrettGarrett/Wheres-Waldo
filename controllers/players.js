@@ -109,6 +109,15 @@ router.put("/:id/foundWaldo/fortress", (req, res) => {
         });
 	})
 
+// Edit -  Found Waldo Foresters
+router.put("/:id/foundWaldo/foresters", (req, res) => {
+	Player.findById(req.params.id, (error, foundPlayer) => {
+		Player.findByIdAndUpdate(req.params.id, { forestersscore: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)), score: (Math.round((((new Date(Date.now())) - foundPlayer.startTime) / 1000) - 0)) }, {new:true}, (error, foundPlayer) => { 
+            res.redirect(`/${req.params.id}/Dashboard`);
+			});
+        });
+	})
+
 // Edit -  Found Waldo Middle Ages
 router.put("/:id/foundWaldo/middleages", (req, res) => {
 	Player.findById(req.params.id, (error, foundPlayer) => {

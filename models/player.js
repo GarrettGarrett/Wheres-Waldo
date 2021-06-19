@@ -13,6 +13,7 @@ const playerSchema = new Schema({
     fortressscore: String,
     middleagesscore: String,
     undergroundscore: String,
+    forestersscore: String,
     giantsscore: String,
     moviescore: String,
     athleticsscore: String,
