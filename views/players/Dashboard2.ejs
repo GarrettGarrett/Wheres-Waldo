@@ -57,7 +57,8 @@
                 <form action="/<%= player._id %>/edit?_method=PUT" method="POST" href=''>
                     <input id='newUserName' type="text" name="username" value="<%= player.username %>"  >
                 <td>
-                  <button name="fileurlsubmitted" value="Edit Username" class="waves-effect waves-light btn-small" id="submitFileUrlForDownload"><i class="material-icons right">edit</i>Edit Name</button>
+                  <button onclick="M.toast({html: 'Username updated!'})" name="fileurlsubmitted" value="Edit Username" class="waves-effect waves-light btn-small" id="submitFileUrlForDownload"><i class="material-icons right" class="btn">edit</i>Edit Name</button>
+                  
                 </form>
                 
                 
@@ -1110,7 +1111,7 @@
             console.log("edit username clicked")
             document.forms['usernameForm'].submit();
         }
-        
+       
         const tableIDArray = ["seaTable", "gluttonTable", "townTable", "fortressTable", "middleagesTable", "undergroundTable","forestTable", "giantsTable", "movieTable", "athleticsTable", "mazeTable", "spaceTable", "skiTable", "brawlTable", "midievalTable"]
         
         tableIDArray.forEach(element => sortTableByScore(element)) //re arranges table by their score, before HH:MM:SS
