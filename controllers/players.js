@@ -9,7 +9,7 @@ const random_user = rug.generate();
 // Home Route
 router.get('/' , (req, res) => {
     Player.find({}, (err, foundPlayers) => {
-		res.render('index2.ejs',  {
+		res.render('index.ejs',  {
 			players: foundPlayers,
             randomUser: rug.generate(),
     })
@@ -44,7 +44,7 @@ router.get('/:id', (req, res) => {
 router.get('/:id/dashboard', (req, res) => {
     Player.find({}, (error, foundPlayers) => {
         Player.findById(req.params.id, (error, foundPlayer) => {
-            res.render('./players/Dashboard2.ejs', {
+            res.render('./players/dashboard.ejs', {
             player: foundPlayer,
             players: foundPlayers
             
