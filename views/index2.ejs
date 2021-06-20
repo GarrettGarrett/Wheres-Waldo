@@ -20,6 +20,8 @@
 <br>
 <br>
 </header>
+
+
   <body>
       <!-- ----------------------------------------------------------------------- -->
     <div class="container">
@@ -49,35 +51,35 @@
             
         </div>
 
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-                </span>
+        <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+            </span>
+        
+            <table id='seaTable' class="highlight">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Time</th>
+                            <th>User</th>
+                        </tr>
+                    </thead>
             
-                <table id='seaTable' class="highlight">
-                        <thead>
-                            <tr>
-                                <th>Position</th>
-                                <th>Time</th>
-                                <th>User</th>
-                            </tr>
-                        </thead>
-                
-                        <tbody class='hiscore'>
-                        <% for(let i = 0; i < players.length; i++) { %>
-                        <% if (players[i].seascore > 0) { %>
-                            <tr>
-                            <td> <%= i + 1 %> </td>
-                            <td><%= players[i].seascore %></td>
-                            <td><%= players[i].username %></td>
-                            </tr>
-                        <% } %> 
-                        <% } %> 
-                        </tbody>
+                    <tbody class='hiscore'>
+                    <% for(let i = 0; i < players.length; i++) { %>
+                    <% if (players[i].seascore > 0) { %>
+                        <tr>
+                        <td> <%= i + 1 %> </td>
+                        <td><%= players[i].seascore %></td>
+                        <td><%= players[i].username %></td>
+                        </tr>
+                    <% } %> 
+                    <% } %> 
+                    </tbody>
 
-                </table>
+            </table>
 
-            </div>
         </div>
+    </div>
 </div>
 
 <!-- ----------------------------------Glutton------------------------------------- -->
@@ -104,36 +106,36 @@
             
         </div>
     
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-                </span>
-            
-                <table id='seaTable' class="highlight">
-                        <thead>
-                            <tr>
-                                <th>Position</th>
-                                <th>Time</th>
-                                <th>User</th>
-                            </tr>
-                        </thead>
-                
-                        <tbody class='hiscore'>
-                        <% for(let i = 0; i < players.length; i++) { %>
-                        <% if (players[i].gobblingscore > 0) { %>
-                            <tr>
-                            <td> <%= i + 1 %> </td>
-                            <td><%= players[i].gobblingscore %></td>
-                            <td><%= players[i].username %></td>
-                            </tr>
-                        <% } %> 
-                        <% } %> 
-                        </tbody>
-    
-                </table>
-    
-            </div>
-        </div>
-    </div>
+              <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+                  </span>
+              
+                  <table id='gluttonTable' class="highlight">
+                          <thead>
+                              <tr>
+                                  <th>Position</th>
+                                  <th>Time</th>
+                                  <th>User</th>
+                              </tr>
+                          </thead>
+                  
+                          <tbody class='hiscore'>
+                          <% for(let i = 0; i < players.length; i++) { %>
+                          <% if (players[i].gobblingscore > 0) { %>
+                              <tr>
+                              <td> <%= i + 1 %> </td>
+                              <td><%= players[i].gobblingscore %></td>
+                              <td><%= players[i].username %></td>
+                              </tr>
+                          <% } %> 
+                          <% } %> 
+                          </tbody>
+      
+                  </table>
+      
+              </div>
+          </div>
+      </div>
 <!-- ----------------------------------------------------------------------- -->
  <!-- --------------------------------In Town--------------------------------------- -->
 
@@ -160,35 +162,35 @@
             
         </div>
 
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-                </span>
+        <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+            </span>
+        
+            <table id='townTable' class="highlight">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Time</th>
+                            <th>User</th>
+                        </tr>
+                    </thead>
             
-                <table id='seaTable' class="highlight">
-                        <thead>
-                            <tr>
-                                <th>Position</th>
-                                <th>Time</th>
-                                <th>User</th>
-                            </tr>
-                        </thead>
-                
-                        <tbody class='hiscore'>
-                        <% for(let i = 0; i < players.length; i++) { %>
-                        <% if (players[i].townscore > 0) { %>
-                            <tr>
-                            <td> <%= i + 1 %> </td>
-                            <td><%= players[i].townscore %></td>
-                            <td><%= players[i].username %></td>
-                            </tr>
-                        <% } %> 
-                        <% } %> 
-                        </tbody>
+                    <tbody class='hiscore'>
+                    <% for(let i = 0; i < players.length; i++) { %>
+                    <% if (players[i].townscore > 0) { %>
+                        <tr>
+                        <td> <%= i + 1 %> </td>
+                        <td><%= players[i].townscore %></td>
+                        <td><%= players[i].username %></td>
+                        </tr>
+                    <% } %> 
+                    <% } %> 
+                    </tbody>
 
-                </table>
+            </table>
 
-            </div>
         </div>
+    </div>
 </div>
 
 <!-- ----------------------------------------------------------------------- -->
@@ -216,34 +218,34 @@
     
 </div>
 
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-        </span>
+<div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+    </span>
+
+    <table id='fortressTable' class="highlight">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>User</th>
+                </tr>
+            </thead>
     
-        <table id='seaTable' class="highlight">
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Time</th>
-                        <th>User</th>
-                    </tr>
-                </thead>
-        
-                <tbody class='hiscore'>
-                <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].fortressscore > 0) { %>
-                    <tr>
-                    <td> <%= i + 1 %> </td>
-                    <td><%= players[i].fortressscore %></td>
-                    <td><%= players[i].username %></td>
-                    </tr>
-                <% } %> 
-                <% } %> 
-                </tbody>
+            <tbody class='hiscore'>
+            <% for(let i = 0; i < players.length; i++) { %>
+            <% if (players[i].fortressscore > 0) { %>
+                <tr>
+                <td> <%= i + 1 %> </td>
+                <td><%= players[i].fortressscore %></td>
+                <td><%= players[i].username %></td>
+                </tr>
+            <% } %> 
+            <% } %> 
+            </tbody>
 
-        </table>
+    </table>
 
-    </div>
+</div>
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -270,34 +272,34 @@
     
 </div>
 
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-        </span>
+<div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+    </span>
+
+    <table id='middleagesTable' class="highlight">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>User</th>
+                </tr>
+            </thead>
     
-        <table id='seaTable' class="highlight">
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Time</th>
-                        <th>User</th>
-                    </tr>
-                </thead>
-        
-                <tbody class='hiscore'>
-                <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].middleagesscore > 0) { %>
-                    <tr>
-                    <td> <%= i + 1 %> </td>
-                    <td><%= players[i].middleagesscore %></td>
-                    <td><%= players[i].username %></td>
-                    </tr>
-                <% } %> 
-                <% } %> 
-                </tbody>
+            <tbody class='hiscore'>
+            <% for(let i = 0; i < players.length; i++) { %>
+            <% if (players[i].middleagesscore > 0) { %>
+                <tr>
+                <td> <%= i + 1 %> </td>
+                <td><%= players[i].middleagesscore %></td>
+                <td><%= players[i].username %></td>
+                </tr>
+            <% } %> 
+            <% } %> 
+            </tbody>
 
-        </table>
+    </table>
 
-    </div>
+</div>
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -324,34 +326,34 @@
     
 </div>
 
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-        </span>
+<div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+    </span>
+
+    <table id='undergroundTable' class="highlight">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>User</th>
+                </tr>
+            </thead>
     
-        <table id='seaTable' class="highlight">
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Time</th>
-                        <th>User</th>
-                    </tr>
-                </thead>
-        
-                <tbody class='hiscore'>
-                <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].undergroundscore > 0) { %>
-                    <tr>
-                    <td> <%= i + 1 %> </td>
-                    <td><%= players[i].undergroundscore %></td>
-                    <td><%= players[i].username %></td>
-                    </tr>
-                <% } %> 
-                <% } %> 
-                </tbody>
+            <tbody class='hiscore'>
+            <% for(let i = 0; i < players.length; i++) { %>
+            <% if (players[i].undergroundscore > 0) { %>
+                <tr>
+                <td> <%= i + 1 %> </td>
+                <td><%= players[i].undergroundscore %></td>
+                <td><%= players[i].username %></td>
+                </tr>
+            <% } %> 
+            <% } %> 
+            </tbody>
 
-        </table>
+    </table>
 
-    </div>
+</div>
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -378,34 +380,34 @@
     
 </div>
 
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-        </span>
+<div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+    </span>
+
+    <table id='forestTable' class="highlight">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>User</th>
+                </tr>
+            </thead>
     
-        <table id='seaTable' class="highlight">
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Time</th>
-                        <th>User</th>
-                    </tr>
-                </thead>
-        
-                <tbody class='hiscore'>
-                <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].forestersscore > 0) { %>
-                    <tr>
-                    <td> <%= i + 1 %> </td>
-                    <td><%= players[i].forestersscore %></td>
-                    <td><%= players[i].username %></td>
-                    </tr>
-                <% } %> 
-                <% } %> 
-                </tbody>
+            <tbody class='hiscore'>
+            <% for(let i = 0; i < players.length; i++) { %>
+            <% if (players[i].forestersscore > 0) { %>
+                <tr>
+                <td> <%= i + 1 %> </td>
+                <td><%= players[i].forestersscore %></td>
+                <td><%= players[i].username %></td>
+                </tr>
+            <% } %> 
+            <% } %> 
+            </tbody>
 
-        </table>
+    </table>
 
-    </div>
+</div>
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -432,34 +434,34 @@
     
 </div>
 
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-        </span>
+<div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+    </span>
+
+    <table id='giantsTable' class="highlight">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>User</th>
+                </tr>
+            </thead>
     
-        <table id='seaTable' class="highlight">
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Time</th>
-                        <th>User</th>
-                    </tr>
-                </thead>
-        
-                <tbody class='hiscore'>
-                <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].giantsscore > 0) { %>
-                    <tr>
-                    <td> <%= i + 1 %> </td>
-                    <td><%= players[i].giantsscore %></td>
-                    <td><%= players[i].username %></td>
-                    </tr>
-                <% } %> 
-                <% } %> 
-                </tbody>
+            <tbody class='hiscore'>
+            <% for(let i = 0; i < players.length; i++) { %>
+            <% if (players[i].giantsscore > 0) { %>
+                <tr>
+                <td> <%= i + 1 %> </td>
+                <td><%= players[i].giantsscore %></td>
+                <td><%= players[i].username %></td>
+                </tr>
+            <% } %> 
+            <% } %> 
+            </tbody>
 
-        </table>
+    </table>
 
-    </div>
+</div>
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -486,34 +488,34 @@
     
 </div>
 
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-        </span>
+<div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+    </span>
+
+    <table id='movieTable' class="highlight">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>User</th>
+                </tr>
+            </thead>
     
-        <table id='seaTable' class="highlight">
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Time</th>
-                        <th>User</th>
-                    </tr>
-                </thead>
-        
-                <tbody class='hiscore'>
-                <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].moviescore > 0) { %>
-                    <tr>
-                    <td> <%= i + 1 %> </td>
-                    <td><%= players[i].moviescore %></td>
-                    <td><%= players[i].username %></td>
-                    </tr>
-                <% } %> 
-                <% } %> 
-                </tbody>
+            <tbody class='hiscore'>
+            <% for(let i = 0; i < players.length; i++) { %>
+            <% if (players[i].moviescore > 0) { %>
+                <tr>
+                <td> <%= i + 1 %> </td>
+                <td><%= players[i].moviescore %></td>
+                <td><%= players[i].username %></td>
+                </tr>
+            <% } %> 
+            <% } %> 
+            </tbody>
 
-        </table>
+    </table>
 
-    </div>
+</div>
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -540,34 +542,34 @@
     
 </div>
 
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-        </span>
+<div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+    </span>
+
+    <table id='athleticsTable' class="highlight">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>User</th>
+                </tr>
+            </thead>
     
-        <table id='seaTable' class="highlight">
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Time</th>
-                        <th>User</th>
-                    </tr>
-                </thead>
-        
-                <tbody class='hiscore'>
-                <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].athleticsscore > 0) { %>
-                    <tr>
-                    <td> <%= i + 1 %> </td>
-                    <td><%= players[i].athleticsscore %></td>
-                    <td><%= players[i].username %></td>
-                    </tr>
-                <% } %> 
-                <% } %> 
-                </tbody>
+            <tbody class='hiscore'>
+            <% for(let i = 0; i < players.length; i++) { %>
+            <% if (players[i].athleticsscore > 0) { %>
+                <tr>
+                <td> <%= i + 1 %> </td>
+                <td><%= players[i].athleticsscore %></td>
+                <td><%= players[i].username %></td>
+                </tr>
+            <% } %> 
+            <% } %> 
+            </tbody>
 
-        </table>
+    </table>
 
-    </div>
+</div>
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -594,34 +596,34 @@
     
 </div>
 
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-        </span>
+<div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+    </span>
+
+    <table id='mazeTable' class="highlight">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>User</th>
+                </tr>
+            </thead>
     
-        <table id='seaTable' class="highlight">
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Time</th>
-                        <th>User</th>
-                    </tr>
-                </thead>
-        
-                <tbody class='hiscore'>
-                <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].mazescore > 0) { %>
-                    <tr>
-                    <td> <%= i + 1 %> </td>
-                    <td><%= players[i].mazescore %></td>
-                    <td><%= players[i].username %></td>
-                    </tr>
-                <% } %> 
-                <% } %> 
-                </tbody>
+            <tbody class='hiscore'>
+            <% for(let i = 0; i < players.length; i++) { %>
+            <% if (players[i].mazescore > 0) { %>
+                <tr>
+                <td> <%= i + 1 %> </td>
+                <td><%= players[i].mazescore %></td>
+                <td><%= players[i].username %></td>
+                </tr>
+            <% } %> 
+            <% } %> 
+            </tbody>
 
-        </table>
+    </table>
 
-    </div>
+</div>
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -648,34 +650,34 @@
     
 </div>
 
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-        </span>
+<div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+    </span>
+
+    <table id='spaceTable' class="highlight">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>User</th>
+                </tr>
+            </thead>
     
-        <table id='seaTable' class="highlight">
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Time</th>
-                        <th>User</th>
-                    </tr>
-                </thead>
-        
-                <tbody class='hiscore'>
-                <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].spacescore > 0) { %>
-                    <tr>
-                    <td> <%= i + 1 %> </td>
-                    <td><%= players[i].spacescore %></td>
-                    <td><%= players[i].username %></td>
-                    </tr>
-                <% } %> 
-                <% } %> 
-                </tbody>
+            <tbody class='hiscore'>
+            <% for(let i = 0; i < players.length; i++) { %>
+            <% if (players[i].spacescore > 0) { %>
+                <tr>
+                <td> <%= i + 1 %> </td>
+                <td><%= players[i].spacescore %></td>
+                <td><%= players[i].username %></td>
+                </tr>
+            <% } %> 
+            <% } %> 
+            </tbody>
 
-        </table>
+    </table>
 
-    </div>
+</div>
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -702,34 +704,34 @@
     
 </div>
 
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-        </span>
+<div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+    </span>
+
+    <table id='skiTable' class="highlight">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>User</th>
+                </tr>
+            </thead>
     
-        <table id='seaTable' class="highlight">
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Time</th>
-                        <th>User</th>
-                    </tr>
-                </thead>
-        
-                <tbody class='hiscore'>
-                <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].skiscore > 0) { %>
-                    <tr>
-                    <td> <%= i + 1 %> </td>
-                    <td><%= players[i].skiscore %></td>
-                    <td><%= players[i].username %></td>
-                    </tr>
-                <% } %> 
-                <% } %> 
-                </tbody>
+            <tbody class='hiscore'>
+            <% for(let i = 0; i < players.length; i++) { %>
+            <% if (players[i].skiscore > 0) { %>
+                <tr>
+                <td> <%= i + 1 %> </td>
+                <td><%= players[i].skiscore %></td>
+                <td><%= players[i].username %></td>
+                </tr>
+            <% } %> 
+            <% } %> 
+            </tbody>
 
-        </table>
+    </table>
 
-    </div>
+</div>
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -756,34 +758,34 @@
     
 </div>
 
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-        </span>
+<div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+    </span>
+
+    <table id='brawlTable' class="highlight">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>User</th>
+                </tr>
+            </thead>
     
-        <table id='seaTable' class="highlight">
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Time</th>
-                        <th>User</th>
-                    </tr>
-                </thead>
-        
-                <tbody class='hiscore'>
-                <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].brawlscore > 0) { %>
-                    <tr>
-                    <td> <%= i + 1 %> </td>
-                    <td><%= players[i].brawlscore %></td>
-                    <td><%= players[i].username %></td>
-                    </tr>
-                <% } %> 
-                <% } %> 
-                </tbody>
+            <tbody class='hiscore'>
+            <% for(let i = 0; i < players.length; i++) { %>
+            <% if (players[i].brawlscore > 0) { %>
+                <tr>
+                <td> <%= i + 1 %> </td>
+                <td><%= players[i].brawlscore %></td>
+                <td><%= players[i].username %></td>
+                </tr>
+            <% } %> 
+            <% } %> 
+            </tbody>
 
-        </table>
+    </table>
 
-    </div>
+</div>
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -810,34 +812,34 @@
     
 </div>
 
-    <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
-        </span>
+<div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">High Scores<i class="material-icons right">close</i>
+    </span>
+
+    <table id='midievalTable' class="highlight">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Time</th>
+                    <th>User</th>
+                </tr>
+            </thead>
     
-        <table id='seaTable' class="highlight">
-                <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>Time</th>
-                        <th>User</th>
-                    </tr>
-                </thead>
-        
-                <tbody class='hiscore'>
-                <% for(let i = 0; i < players.length; i++) { %>
-                <% if (players[i].midievalscore > 0) { %>
-                    <tr>
-                    <td> <%= i + 1 %> </td>
-                    <td><%= players[i].midievalscore %></td>
-                    <td><%= players[i].username %></td>
-                    </tr>
-                <% } %> 
-                <% } %> 
-                </tbody>
+            <tbody class='hiscore'>
+            <% for(let i = 0; i < players.length; i++) { %>
+            <% if (players[i].midievalscore > 0) { %>
+                <tr>
+                <td> <%= i + 1 %> </td>
+                <td><%= players[i].midievalscore %></td>
+                <td><%= players[i].username %></td>
+                </tr>
+            <% } %> 
+            <% } %> 
+            </tbody>
 
-        </table>
+    </table>
 
-    </div>
+</div>
 </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -964,6 +966,26 @@
                 
                 };  
             };
+
+        function resultsScore(tableid) {
+            var toHHMMSS = (secs) => { //convert seconds to HH:MM:SS format
+                var sec_num = parseInt(secs, 10)
+                var hours   = Math.floor(sec_num / 3600)
+                var minutes = Math.floor(sec_num / 60) % 60
+                var seconds = sec_num % 60
+
+                return [hours,minutes,seconds]
+                    .map(v => v < 10 ? "0" + v : v)
+                    .filter((v,i) => v !== "00" || i > 0)
+                    .join(":")
+            }
+                latestScore = document.getElementById(tableid)
+                latestScore.innerHTML =  toHHMMSS(latestScore.textContent)      
+      
+            };  
+
+
+           
         
 
 
@@ -971,11 +993,16 @@
             console.log("edit username clicked")
             document.forms['usernameForm'].submit();
         }
- 
-        sortTableByScore('seaTable'); //re arranges table by their score, before hh:mm:ss
-        assignPositionToTable('seaTable'); // adds 1st, 2nd 3rd positions
-        newfunction('seaTable'); //corrects format to 00:00:00
        
+        const tableIDArray = ["seaTable", "gluttonTable", "townTable", "fortressTable", "middleagesTable", "undergroundTable","forestTable", "giantsTable", "movieTable", "athleticsTable", "mazeTable", "spaceTable", "skiTable", "brawlTable", "midievalTable"]
+        
+        tableIDArray.forEach(element => sortTableByScore(element)) //re arranges table by their score, before HH:MM:SS
+        tableIDArray.forEach(element => assignPositionToTable(element))// adds 1st, 2nd 3rd positions
+        tableIDArray.forEach(element => newfunction(element)) //corrects format to HH:MM:SS
+        
+        
+        
+        
         </script>
   </body>
 </html>
