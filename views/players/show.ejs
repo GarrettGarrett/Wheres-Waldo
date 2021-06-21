@@ -1,260 +1,183 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css"   href="/css/style.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        
-      </head>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 <body>
-    
     <header>
-        
-
         <nav style='min-height: 150px; margin-bottom: 3%;'>
-          <div class="nav-wrapper">
-            <h1 id="time" class="">00:00:00</h1>
-            
-
-            <img id='waldoHeader' style="max-width: 130px" class="brand-logo right" src="https://i.imgur.com/TQyZGls.png" alt="">
-            
-            
-            
-            
-            
-          </div>
+            <div class="nav-wrapper">
+                <h1 id="time" class="">00:00:00</h1>
+                <img id='waldoHeader' style="max-width: 130px" class="brand-logo right"
+                    src="https://i.imgur.com/TQyZGls.png" alt="">
+            </div>
         </nav>
-        
-
-      </header>
-       
-
-
-
-      
-      
-      
-
-
-    
+    </header>
     <% if (player.location === "At Sea") { %>
-
-    
-        <main>
-            <img src= 'https://i.imgur.com/FMJWVAJ.jpg' alt="Waldo" usemap="#waldomap">
-    
-            <map style="cursor: default" name="waldomap">
-                <area  shape="rect" coords="1313,354,1355,408"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-                
-            </map>
-        </main>
-
-
-    <% } else if (player.location === "Gobbling Gluttons") { %>
-        <main>
-            <img src= 'https://i.imgur.com/lXLN6qI.jpeg' alt="Waldo" usemap="#waldomap">
-    
-            <map name="waldomap">
-                <area shape="rect" coords="1076,556,1106,598"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-                
-            </map>
-        </main>
-
-    <% } else if (player.location === "In Town") { %>
-        <main>
-            <img src= 'https://i.imgur.com/M7xwSQ3.jpg' alt="Waldo" usemap="#waldomap">
-    
-            <map name="waldomap">
-                <area shape="rect" coords="1208,1036,1241,1087"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-                
-            </map>
-        </main>
-
-    <% } else if (player.location === "Fortress") { %>
-        <main>
-            <img src= 'https://i.imgur.com/e01mxvh.jpg' alt="Waldo" usemap="#waldomap">
-    
-            <map name="waldomap">
-                <area shape="rect" coords="2106,1328,2127,1355"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-                
-            </map>
-        </main>
-
-    <% } else if (player.location === "Middle Ages") { %>
-        <main>
-            <img src= 'https://i.imgur.com/YaWwZHt.jpg' alt="Waldo" usemap="#waldomap">
-    
-            <map name="waldomap">
-                <area shape="rect" coords="2031,892,2067,934"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-                
-            </map>
-        </main>
-
-    <% } else if (player.location === "Underground") { %>
-        <main>
-            <img src= 'https://i.imgur.com/Cue8FfD.jpg' alt="Waldo" usemap="#waldomap">
-    
-            <map name="waldomap">
-                <area shape="rect" coords="1965,69,1980,165"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-                
-            </map>
-        </main>
-
-    
-    <% } else if (player.location === "UnFriendly Giants") { %>       
-        <main>
-            <img src= 'https://i.imgur.com/iHkNXtV.jpg' alt="Waldo" usemap="#waldomap">
-    
-            <map name="waldomap">
-                <area shape="rect" coords="1923,1382,1944,1427" alt="waldo" href="/<%= player._id %>/preDashboard" 
-                
-            </map>
-        </main>
-
-
-        <% } else if (player.location === "Foresters") { %>  
-        <main>
-            <img src= 'https://i.imgur.com/CkkCkN0.jpg' alt="Waldo" usemap="#waldomap">
-    
-            <map name="waldomap">
-                <area shape="rect" coords="1136,1267,1154,1306"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-                
-            </map>
-        </main>
-
-
-    <% } else if (player.location === "Silent Movie") { %>   
-        <main>
-            <img src= 'https://i.imgur.com/jB09DjJ.jpg' alt="Waldo" usemap="#waldomap">
-    
-            <map name="waldomap">
-                <area shape="rect" coords="757,1066,790,1108" alt="waldo" href="/<%= player._id %>/preDashboard" 
-                
-            </map>
-        </main>
-
-    <% } else if (player.location === "Sports Stadium") { %>   
     <main>
-        <img src= 'https://i.imgur.com/eDcX9KY.jpg' alt="Waldo" usemap="#waldomap">
+        <img src='https://i.imgur.com/FMJWVAJ.jpg' alt="Waldo" usemap="#waldomap">
+        <map style="cursor: default" name="waldomap">
+            <area shape="rect" coords="1313,354,1355,408" alt="waldo" href="/<%= player._id %>/preDashboard" </map>
 
-        <map name="waldomap">
-            <area shape="rect" coords="273,1415,312,1496"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-            
-        </map>
-    </main>
+                </main> <% } else if (player.location === "Gobbling Gluttons") { %> <main>
+            <img src='https://i.imgur.com/lXLN6qI.jpeg' alt="Waldo" usemap="#waldomap">
 
-<% } else if (player.location === "Maze") { %>   
-    <main>
-        <img src= 'https://i.imgur.com/QodFZhA.jpg' alt="Waldo" usemap="#waldomap">
+            <map name="waldomap">
+                <area shape="rect" coords="1076,556,1106,598" alt="waldo" href="/<%= player._id %>/preDashboard" </map>
 
-        <map name="waldomap">
-            <area shape="rect" coords="2133,922,2154,952"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-            
-        </map>
-    </main>
+                    </main> <% } else if (player.location === "In Town") { %> <main>
+                <img src='https://i.imgur.com/M7xwSQ3.jpg' alt="Waldo" usemap="#waldomap">
 
-<% } else if (player.location === "Outer Space") { %>  
-    <main>
-        <img src= 'https://i.imgur.com/UJu1USE.jpg' alt="Waldo" usemap="#waldomap">
+                <map name="waldomap">
+                    <area shape="rect" coords="1208,1036,1241,1087" alt="waldo" href="/<%= player._id %>/preDashboard"
+                        </map> </main> <% } else if (player.location === "Fortress") { %> <main>
+                    <img src='https://i.imgur.com/e01mxvh.jpg' alt="Waldo" usemap="#waldomap">
 
-        <map name="waldomap">
-            <area shape="rect" coords="814,904,835,970"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-            
-        </map>
-    </main>
+                    <map name="waldomap">
+                        <area shape="rect" coords="2106,1328,2127,1355" alt="waldo"
+                            href="/<%= player._id %>/preDashboard" </map> </main>
+                            <% } else if (player.location === "Middle Ages") { %> <main>
+                        <img src='https://i.imgur.com/YaWwZHt.jpg' alt="Waldo" usemap="#waldomap">
 
-<% } else if (player.location === "Ski Slopes") { %>  
-    <main>
-        <img src= 'https://i.imgur.com/de6nmJy.jpg' alt="Waldo" usemap="#waldomap">
+                        <map name="waldomap">
+                            <area shape="rect" coords="2031,892,2067,934" alt="waldo"
+                                href="/<%= player._id %>/preDashboard" </map> </main>
+                                <% } else if (player.location === "Underground") { %> <main>
+                            <img src='https://i.imgur.com/Cue8FfD.jpg' alt="Waldo" usemap="#waldomap">
 
-        <map name="waldomap">
-            <area shape="rect" coords="1355,709,1385,778"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-            
-        </map>
-    </main>
+                            <map name="waldomap">
+                                <area shape="rect" coords="1965,69,1980,165" alt="waldo"
+                                    href="/<%= player._id %>/preDashboard" </map> </main>
+                                    <% } else if (player.location === "UnFriendly Giants") { %> <main>
+                                <img src='https://i.imgur.com/iHkNXtV.jpg' alt="Waldo" usemap="#waldomap">
 
-<% } else if (player.location === "Brawl") { %>  
-    <main>
-        <img src= 'https://i.imgur.com/rbOo4Dk.jpg' alt="Waldo" usemap="#waldomap">
+                                <map name="waldomap">
+                                    <area shape="rect" coords="1923,1382,1944,1427" alt="waldo"
+                                        href="/<%= player._id %>/preDashboard" </map> </main>
+                                        <% } else if (player.location === "Foresters") { %> <main>
+                                    <img src='https://i.imgur.com/CkkCkN0.jpg' alt="Waldo" usemap="#waldomap">
 
-        <map name="waldomap">
-            <area shape="rect" coords="2614,75,2647,150"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-            
-        </map>
-    </main>
+                                    <map name="waldomap">
+                                        <area shape="rect" coords="1136,1267,1154,1306" alt="waldo"
+                                            href="/<%= player._id %>/preDashboard" </map> </main>
+                                            <% } else if (player.location === "Silent Movie") { %> <main>
+                                        <img src='https://i.imgur.com/jB09DjJ.jpg' alt="Waldo" usemap="#waldomap">
 
-<% } else if (player.location === "Midieval") { %>  
-    <main>
-        <img src= 'https://i.imgur.com/8WCBNjO.jpg' alt="Waldo" usemap="#waldomap">
+                                        <map name="waldomap">
+                                            <area shape="rect" coords="757,1066,790,1108" alt="waldo"
+                                                href="/<%= player._id %>/preDashboard" </map> </main>
+                                                <% } else if (player.location === "Sports Stadium") { %> <main>
+                                            <img src='https://i.imgur.com/eDcX9KY.jpg' alt="Waldo" usemap="#waldomap">
 
-        <map name="waldomap">
-            <area shape="rect" coords="1899,598,1953,658"  alt="waldo" href="/<%= player._id %>/preDashboard" 
-            
-        </map>
-    </main>
+                                            <map name="waldomap">
+                                                <area shape="rect" coords="273,1415,312,1496" alt="waldo"
+                                                    href="/<%= player._id %>/preDashboard" </map> </main>
+                                                    <% } else if (player.location === "Maze") { %> <main>
+                                                <img src='https://i.imgur.com/QodFZhA.jpg' alt="Waldo"
+                                                    usemap="#waldomap">
 
-    <% } %>
+                                                <map name="waldomap">
+                                                    <area shape="rect" coords="2133,922,2154,952" alt="waldo"
+                                                        href="/<%= player._id %>/preDashboard" </map> </main>
+                                                        <% } else if (player.location === "Outer Space") { %> <main>
+                                                    <img src='https://i.imgur.com/UJu1USE.jpg' alt="Waldo"
+                                                        usemap="#waldomap">
 
+                                                    <map name="waldomap">
+                                                        <area shape="rect" coords="814,904,835,970" alt="waldo"
+                                                            href="/<%= player._id %>/preDashboard" </map> </main>
+                                                            <% } else if (player.location === "Ski Slopes") { %> <main>
+                                                        <img src='https://i.imgur.com/de6nmJy.jpg' alt="Waldo"
+                                                            usemap="#waldomap">
 
+                                                        <map name="waldomap">
+                                                            <area shape="rect" coords="1355,709,1385,778" alt="waldo"
+                                                                href="/<%= player._id %>/preDashboard" </map> </main>
+                                                                <% } else if (player.location === "Brawl") { %> <main>
+                                                            <img src='https://i.imgur.com/rbOo4Dk.jpg' alt="Waldo"
+                                                                usemap="#waldomap">
+
+                                                            <map name="waldomap">
+                                                                <area shape="rect" coords="2614,75,2647,150" alt="waldo"
+                                                                    href="/<%= player._id %>/preDashboard" </map>
+                                                                    </main>
+                                                                    <% } else if (player.location === "Midieval") { %>
+                                                                    <main>
+                                                                <img src='https://i.imgur.com/8WCBNjO.jpg' alt="Waldo"
+                                                                    usemap="#waldomap">
+
+                                                                <map name="waldomap">
+                                                                    <area shape="rect" coords="1899,598,1953,658"
+                                                                        alt="waldo"
+                                                                        href="/<%= player._id %>/preDashboard" </map>
+                                                                        </main> <% } %> 
 <script>
- 
+
 const timer = document.querySelector('#time');
-const start_btn = document.querySelector('#start_btn');
-const pause_btn = document.querySelector('#pause_btn');
-const reset_btn = document.querySelector('#reset_btn');
+const start_btn =
+document.querySelector('#start_btn');
+const pause_btn =
+document.querySelector('#pause_btn');
+const reset_btn =
+document.querySelector('#reset_btn');
 
 let time = 0,
-  interval;
+interval;
 
 function showTime() {
-  time += 1;
-  timer.innerHTML = toHHMMSS(time);
+time += 1;
+timer.innerHTML = toHHMMSS(time);
 }
 
 function start() {
-  interval = setInterval(showTime, 1000);
+interval = setInterval(showTime, 1000);
 
 }
 
 function pause() {
-  if (interval) {
-    clearInterval(interval);
-    interval = null;
-    pause_btn.innerHTML = 'RESUME';
-  } else {
-    interval = setInterval(showTime, 1000);
-    pause_btn.innerHTML = 'PAUSE';
-  }
+if (interval) {
+clearInterval(interval);
+interval = null;
+pause_btn.innerHTML = 'RESUME';
+} else {
+interval = setInterval(showTime, 1000);
+pause_btn.innerHTML = 'PAUSE';
+}
 }
 
 function reset() {
-  clearInterval(interval);
-  interval = null;
-  pause_btn.innerHTML = 'PAUSE';
-  time = 0;
-  timer.innerHTML = toHHMMSS(time);
-  hideBtn([pause_btn, reset_btn]);
-  showBtn([start_btn]);
+clearInterval(interval);
+interval = null;
+pause_btn.innerHTML = 'PAUSE';
+time = 0;
+timer.innerHTML = toHHMMSS(time);
+hideBtn([pause_btn, reset_btn]);
+showBtn([start_btn]);
 }
 
 function toHHMMSS(time) {
-  let hours = Math.floor(time / 3600);
-  let minutes = Math.floor((time - hours * 3600) / 60);
-  let seconds = time - hours * 3600 - minutes * 60;
+let hours = Math.floor(time / 3600);
+let minutes = Math.floor((time - hours * 3600) /
+60);
+let seconds = time - hours * 3600 - minutes * 60;
 
-  hours = `${hours}`.padStart(2, '0');
-  minutes = `${minutes}`.padStart(2, '0');
-  seconds = `${seconds}`.padStart(2, '0');
+hours = `${hours}`.padStart(2, '0');
+minutes = `${minutes}`.padStart(2, '0');
+seconds = `${seconds}`.padStart(2, '0');
 
-  return hours + ':' + minutes + ':' + seconds;
+return hours + ':' + minutes + ':' + seconds;
 }
 
 function showBtn(btnArr) {
-  btnArr.forEach((btn) => (btn.style.display = 'inline-block'));
+btnArr.forEach((btn) => (btn.style.display =
+'inline-block'));
 }
 function hideBtn(btnArr) {
-  btnArr.forEach((btn) => (btn.style.display = 'none'));
+btnArr.forEach((btn) => (btn.style.display =
+'none'));
 }
 
 
@@ -262,6 +185,6 @@ function hideBtn(btnArr) {
 start();
 
 
-</script>   
+</script>
 </body>
 </html>
